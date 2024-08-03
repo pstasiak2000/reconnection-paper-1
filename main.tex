@@ -1,0 +1,196 @@
+% ****** Start of file apssamp.tex ******
+%
+%   This file is part of the APS files in the REVTeX 4.2 distribution.
+%   Version 4.2a of REVTeX, December 2014
+%
+%   Copyright (c) 2014 The American Physical Society.
+%
+%   See the REVTeX 4 README file for restrictions and more information.
+%
+% TeX'ing this file requires that you have AMS-LaTeX 2.0 installed
+% as well as the rest of the prerequisites for REVTeX 4.2
+%
+% See the REVTeX 4 README file
+% It also requires running BibTeX. The commands are as follows:
+%
+%  1)  latex apssamp.tex
+%  2)  bibtex apssamp
+%  3)  latex apssamp.tex
+%  4)  latex apssamp.tex
+%
+\documentclass[%
+ reprint,
+%superscriptaddress,
+%groupedaddress,
+%unsortedaddress,
+%runinaddress,
+%frontmatterverbose, 
+%preprint,
+%preprintnumbers,
+%nofootinbib,
+%nobibnotes,
+%bibnotes,
+ amsmath,amssymb,
+ aps,
+ prl,
+%pra,
+%prb,
+%rmp,
+%prstab,
+%prstper,
+%floatfix,
+]{revtex4-2}
+
+\usepackage{graphicx}% Include figure files
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}% bold math
+\usepackage{blindtext}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{cleveref}
+\usepackage{subcaption}
+%\usepackage{hyperref}% add hypertext capabilities
+%\usepackage[mathlines]{lineno}% Enable numbering of text and display math
+%\linenumbers\relax % Commence numbering lines
+
+%\usepackage[showframe,%Uncomment any one of the following lines to test 
+%%scale=0.7, marginratio={1:1, 2:3}, ignoreall,% default settings
+%%text={7in,10in},centering,
+%%margin=1.5in,
+%%total={6.5in,8.75in}, top=1.2in, left=0.9in, includefoot,
+%%height=10in,a5paper,hmargin={3cm,0.8in},
+%]{geometry}
+
+
+\newcommand{\etal}{{\it et al.}~}
+\newcommand{\bom}{\boldsymbol{\omega}}
+
+\def \s{\mathbf{s}}
+\def \v{\mathbf{v}}
+\def \x{\mathbf{x}}
+\def \r{\mathbf{r}}
+\def \k{\mathbf{k}}
+
+\def \cm{\mathrm{cm}}
+\def \cms{\mathrm{cm/s}}
+\def \sec{\mathrm{s}}
+\def \K{\mathrm{K}}
+
+\def\red#1{\textcolor{red}{#1}}
+\def\blue#1{\textcolor{blue}{#1}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\begin{document}
+
+\preprint{APS/123-QED}
+
+\title{Punctuated energy injection in superfluid Helium-4 vortex reconnections}
+
+\author{P. Z. Stasiak}
+\author{A. Baggaley}
+\author{C.F. Barenghi}
+\affiliation{School of Mathematics, Statistics and Physics, Newcastle University, Newcastle upon Tyne, NE1 7RU, United Kingdom}
+
+\author{G. Krstulovic}
+\affiliation{Universit\'e C\^ote d'Azur, Observatoire de la C\^ote d'Azur, CNRS,Laboratoire Lagrangre, Boulevard de l'Observatoire CS 34229 - F 06304 NICE Cedex 4, France}
+
+\author{L. Galantucci}
+\affiliation{Istituto per le Applicazioni del Calcolo ``M. Picone" IAC CNR, Via dei Taurini 19, 00185 Roma, Italy}
+
+\date{\today}% It is always \today, today,
+             %  but any date may be explicitly specified
+
+\begin{abstract}
+An article usually includes an abstract, a concise summary of the work
+covered at length in the main body of the article. 
+\end{abstract}
+
+%\keywords{Suggested keywords}%Use showkeys class option if keyword
+                              %display desired
+\maketitle
+
+
+\section{Introduction}
+\blindtext[4]
+
+\begin{figure*}
+	\centering
+	\begin{subfigure}[b]{0.24\textwidth}
+		\centering
+		\includegraphics*[width=\textwidth]{snap-1.png}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.24\textwidth}
+		\centering
+		\includegraphics*[width=\textwidth]{snap-2.png}
+	\end{subfigure}
+    \begin{subfigure}[b]{0.24\textwidth}
+		\centering
+		\includegraphics*[width=\textwidth]{snap-3.png}
+	\end{subfigure}
+    \begin{subfigure}[b]{0.24\textwidth}
+		\centering
+		\includegraphics*[width=\textwidth]{snap-4.png}
+	\end{subfigure}
+    \hfill
+    \vspace{0.5cm}
+	\begin{subfigure}[b]{0.24\textwidth}
+		\centering
+		\includegraphics*[width=\textwidth]{snap-5.png}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.24\textwidth}
+		\centering
+		\includegraphics*[width=\textwidth]{snap-6.png}
+	\end{subfigure}
+    \begin{subfigure}[b]{0.24\textwidth}
+		\centering
+		\includegraphics*[width=\textwidth]{snap-7.png}
+	\end{subfigure}
+    \begin{subfigure}[b]{0.24\textwidth}
+		\centering
+		\includegraphics*[width=\textwidth]{snap-8.png}
+	\end{subfigure}
+
+
+
+	\caption{3D rendering of vortex ring collisions, from a tent-like initial condition. The red tube represents a superfluid vortex, where the radius has been greatly exaggerated for visual purposes, and the blue volume rendering represents the scaled normal fluid enstrophy $\bom^2/\bom^2_{max}$. \emph{Top row:} Isometric view. \emph{Bottom row:} View of the $xy$-plane.}
+\end{figure*}
+
+\blindtext[2]
+
+\begin{figure}
+	\centering
+	\begin{subfigure}[b]{0.45\textwidth}
+		\centering
+		\includegraphics*[width=\textwidth]{min-delta.pdf}
+		\caption{}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.45\textwidth}
+		\centering
+		\includegraphics*[width=\textwidth]{prefactors.pdf}
+		\caption{}
+	\end{subfigure}
+	\caption{\emph{(a)}: Time evolution of the minimum distance squared $\delta^2$ for the Hopf link initial conditions at $T=0K,1.9K$ and $2.1K$. The grey shaded area represens the vertical region used to estimate the prefactors $A^{\pm}$. \emph{Inset:} Values of the seperation prefactor $A^+$ and approach prefactors $A^-$. \emph{(b)}: Comparison of all prefactor values, \emph{HL}-Hopf link (circles), \emph{RC}-ring collision (stars with yellow outline), GPE-data from Gross-Pitaevskii simulations from Villois \etal \cite{villoisIrreversibleDynamicsVortex2020}}
+\end{figure}
+
+\blindtext[5]
+
+\begin{figure}
+	\centering
+	\includegraphics*[width=0.45\textwidth]{energy-evolution.pdf}
+	\caption{Total normal fluid kinetic energy $E_n$ scaled by the kinetic energy at reconnection time $E_n^0$. Black diamonds represent the simulations with minimum and maximum prefactor ratios $A^+/A^-$ at $T=1.9K$ and $T=2.1K$ respectively.}
+\end{figure}
+
+\blindtext[5]
+
+\begin{figure}
+	\centering
+	\includegraphics*[width=0.49\textwidth]{energy-jump.pdf}
+	\caption{Total normal fluid kinetic energy $E_n$ scaled by the kinetic energy at reconnection time $E_n^0$. Black diamonds represent the simulations with minimum and maximum prefactor ratios $A^+/A^-$ at $T=1.9K$ and $T=2.1K$ respectively.}
+\end{figure}
+\bibliography{references}% Produces the bibliography via BibTeX.
+
+\end{document}
+%
+% ****** End of file apssamp.tex ******
