@@ -59,6 +59,7 @@ Thumbs.db
 *.xml
 *.gz
 *.fdb_latexmk
+*.blg
 
 #Specific files to ignore
 recon-paper-1.bib
