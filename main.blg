@@ -16,7 +16,6 @@ Reallocating 'wiz_functions' (item size: 4) to 6000 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
 Database file #1: mainNotes.bib
 Database file #2: references.bib
-Warning--I didn't find a database entry for "SuppMats"
 control{REVTEX42Control}, control.key{N/A}, control.author{N/A}, control.editor{N/A}, control.title{N/A}, control.pages{N/A}, control.year{N/A}, control.eprint{N/A}, 
 control{apsrev42Control}, control.key{N/A}, control.author{08}, control.editor{1}, control.title{0}, control.pages{0}, control.year{1}, control.eprint{N/A}, 
 Warning--jnrlst (dependency: not reversed) set 1
@@ -30,45 +29,46 @@ Control: production of article title (0) allowed
 Control: page (0) single
 Control: year (1) truncated
 Control: production of eprint (0) enabled
-You've used 6 entries,
+Warning--empty year in SeeSupplementaryMaterials
+You've used 9 entries,
             6079 wiz_defined-function locations,
-            1670 strings with 15944 characters,
-and the built_in function-call counts, 5149 in all, are:
-= -- 338
-> -- 108
-< -- 55
-+ -- 38
-- -- 40
-* -- 737
-:= -- 471
-add.period$ -- 4
-call.type$ -- 6
-change.case$ -- 20
-chr.to.int$ -- 16
-cite$ -- 6
-duplicate$ -- 520
-empty$ -- 321
-format.name$ -- 52
-if$ -- 986
+            1684 strings with 16469 characters,
+and the built_in function-call counts, 7681 in all, are:
+= -- 543
+> -- 155
+< -- 65
++ -- 54
+- -- 50
+* -- 1090
+:= -- 721
+add.period$ -- 7
+call.type$ -- 9
+change.case$ -- 35
+chr.to.int$ -- 19
+cite$ -- 12
+duplicate$ -- 751
+empty$ -- 513
+format.name$ -- 80
+if$ -- 1506
 int.to.chr$ -- 1
-int.to.str$ -- 13
-missing$ -- 90
-newline$ -- 64
-num.names$ -- 12
-pop$ -- 220
+int.to.str$ -- 16
+missing$ -- 124
+newline$ -- 73
+num.names$ -- 18
+pop$ -- 321
 preamble$ -- 1
-purify$ -- 20
+purify$ -- 34
 quote$ -- 0
-skip$ -- 229
+skip$ -- 349
 stack$ -- 0
-substring$ -- 115
-swap$ -- 468
-text.length$ -- 10
+substring$ -- 193
+swap$ -- 670
+text.length$ -- 15
 text.prefix$ -- 0
 top$ -- 10
-type$ -- 66
-warning$ -- 1
-while$ -- 23
+type$ -- 104
+warning$ -- 2
+while$ -- 29
 width$ -- 0
-write$ -- 88
+write$ -- 111
 (There were 2 warnings)
