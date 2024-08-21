@@ -166,7 +166,11 @@
 \begin{equation}
 	\dot{\s}(\xi,t) = \v_s + \frac{\beta}{1+\beta}\left[\v_{ns}\cdot \s'\right]\s' + \beta\s'\times\v_{ns}+\beta'\s'\times\left[\s'\times \v_{ns}\right],
 \end{equation}
-here $\dot{\s}=\partial\s/\partial t$, $\s'=\partial\s/\partial \xi$ is the unit tangent vector, $\v_{ns}=\v_n - \v_s$, $\v_n$ and $\v_s$ are the normal fluid and superfluid velocities at $\s$ and $\beta$,$\beta'$ are temperature and Reynolds number dependent mutual fricition coefficients \cite{galantucciNewSelfconsistentApproach2020b}.Superfluid vortices are coupled to a classical description of the incompressible ($\nabla\cdot\v_n=0$) normal fluid via the mutual friciton force $\mathbf{F}_{ns}$
+here $\dot{\s}=\partial\s/\partial t$, $\s'=\partial\s/\partial \xi$ is the unit tangent vector, $\v_{ns}=\v_n - \v_s$, $\v_n$ and $\v_s$ are the normal fluid and superfluid velocities at $\s$ and $\beta$,$\beta'$ are temperature and Reynolds number dependent mutual fricition coefficients \cite{galantucciNewSelfconsistentApproach2020b}. The superfluid velocity $\v_s$ at a point $\x$ is determined by the Biot-Savart law
+\begin{equation}
+	\v_s(\x,t) = \frac{\kappa}{4\pi}\oint_{\mathcal{T}}\frac{\s'(\xi,t)\times\left[\x-\s(\xi,t)\right]}{|\x-\s(\xi,t)|}d\xi,
+\end{equation}
+where $\mathcal{T}$ represents the entire vortex configuration. Superfluid vortices are coupled to a classical description of the incompressible ($\nabla\cdot\v_n=0$) normal fluid via the mutual friciton force $\mathbf{F}_{ns}$
 \begin{equation}
 	\frac{\partial \v_n}{\partial t} + (\v_n\cdot\nabla)\v_n = -\nabla\frac{p}{\rho} + \nu_n\nabla^2\v_n + \frac{\mathbf{F}_{ns}}{\rho_n},
 \end{equation}
@@ -197,19 +201,26 @@ where $\kappa$ is the quantum of circulation,$t_0$ is the reconnection time, $A^
 	\caption{\emph{(a)}: Time evolution of the minimum distance squared $\delta^2$ for the Hopf link initial conditions at $T=0K,1.9K$ and $2.1K$. The grey shaded area represens the vertical region used to estimate the prefactors $A^{\pm}$. \emph{Inset:} Values of the seperation prefactor $A^+$ and approach prefactors $A^-$. \emph{(b)}: Comparison of all prefactor values, \emph{HL}-Hopf link (circles), \emph{RC}-ring collision (stars with yellow outline), GPE-data from Gross-Pitaevskii simulations from Villois \etal \cite{villoisIrreversibleDynamicsVortex2020}. The shaded areas associated with each colour represent the convex hull of errors for each temperature. }
 \end{figure}
 
-The steep energy injection observed at reconnection time in the normal fluid kinetic energy $E_n$ is driven by the violent topological change in the vortex geometry. The coupling mutual fricition force $\mathbf{f}_{ns}(\s)$, in the first approximation $|\mathbf{f}_{ns}|\propto|\dot{\s}-\v_n|\propto\zeta$, where $\zeta=|\s''|$ is the curvature of the vortex line at $\s$. The curvature $\zeta$ spikes when the post-reconnection cusp is created, viciously stirring the normal fluid and generating excitations, see Fig. \ref{fig: ring-coll-viz}. The prefactor ratio $A^+/A^-$ has been shown in recent literature \cite{villoisIrreversibleDynamicsVortex2020,villoisUniversalNonuniversalAspects2017a,promentMatchingTheoryCharacterize2020a} to be of importance in describing fundamental properties of reconnections using the Gross-Pitaevskii equation
+The steep energy injection observed at reconnection time in the normal fluid kinetic energy $E_n$ is driven by the violent topological change in the vortex geometry. The coupling mutual fricition force $\mathbf{f}_{ns}(\s)$, in the first approximation $|\mathbf{f}_{ns}|\propto|\dot{\s}-\v_n|\propto\zeta$, where $\zeta=|\s''|$ is the curvature of the vortex line at $\s$. The curvature $\zeta$ spikes when the post-reconnection cusp is created, viciously stirring the normal fluid and generating excitations \cite{stasiakCrossComponentEnergyTransfer2024a}, see Fig. \ref{fig: ring-coll-viz}. The prefactor ratio $A^+/A^-$ has been shown in recent literature \cite{villoisIrreversibleDynamicsVortex2020,villoisUniversalNonuniversalAspects2017a,promentMatchingTheoryCharacterize2020a} to be of importance in describing fundamental properties of reconnections using the Gross-Pitaevskii (GP) equation. Due to the \emph{ad-hoc} nature of vortex recnnections in our helium model, it is not trivial to derive a linear theory in the limit $\delta^{\pm}\rightarrow0$. 
 
 
-\begin{figure}
+\begin{figure}[H]
 	\centering
 	\includegraphics*[width=0.45\textwidth]{energy-evolution.pdf}
 	\caption{Total normal fluid kinetic energy $E_n$ scaled by the kinetic energy at reconnection time $E_n^0$. Black diamonds represent the simulations with minimum and maximum prefactor ratios $A^+/A^-$ at $T=1.9K$ and $T=2.1K$ respectively.}
 \end{figure}
 
+The total energy injected into the normal fluid by the reconnection $\Delta E_n$, which we refer to as energy jumps, is computed by 
+\begin{equation}
+	\Delta E_n = \max{\left[E_n(t>t_0)\right]} - E_n^0
+\end{equation} 
+where $E_n^0$ is the normal fluid kinetic energy at reconnection time $E_n^0=E_n(t_0)$. The normalised energy jumps are shown in Fig. \ref{fig: energy-jumps}, plotted against the prefactor ratio $A^+/A^-$. Here, we observe that a higher value of $A^+/A^-$, i.e a larger asymmetry in reconnection dynamics, in fact leads to smaller normal fluid excitations during the reconnection procedure. The emission of sound pulses is a common feature of superfluid vortex reconnections \cite{leadbeaterSoundEmissionDue2001b} which is restricted by our incompressible hydrodynamic model. In the local induction approximation, the superfluid kinetic energy is proportional to the length of filaments $E_s\propto L$. To compensate for this expulsion of superfluid kinetic energy, a portion of line length $\Delta L$ is removed during reconnection. At $T=0K$, the absence of a dissipative normal fluid removes any possible sinks of energy, and so ensures that any removal of energy $\Delta E_s\propto \Delta L$. Consequentially, as shown as black diamonds in Fig. \ref{fig: energy-jumps}, the superfluid energy $E_s$ that would be transferred to a sound pulse, $-\Delta L/L_0$, exhibits the same characteristic behaviour as the normal fluid energy injected $\Delta E_n/E_n^0$. Remarkably, the theoretical sound pulse energy $-\Delta L/L_0$ at $T=0K$ is in very good agreement with the energy pulse generated in the GP. 
+
 \begin{figure}
 	\centering
-	\includegraphics*[width=0.49\textwidth]{energy-jump.pdf}
-	\caption{The total energy jump $\Delta E_n$, the increase in normal fluid kinetic energy due to a superfluid vortex reconnection. The solid black diamond represents the change in line length $\Delta L$ in the $T=0K$ case, and the purple squares is from GP simulations from Villois \etal \cite{villoisIrreversibleDynamicsVortex2020}}
+	\includegraphics*[width=0.48\textwidth]{energy-jump.pdf}
+	\caption{The total energy jump $\Delta E_n$, the increase in normal fluid kinetic energy due to a superfluid vortex reconnection, for the Hopf links. The solid black diamond represents the change in line length $\Delta L$ in the $T=0K$ case, and the purple squares are from GP simulations from Villois \etal \cite{villoisIrreversibleDynamicsVortex2020}}
+	\label{fig: energy-jumps}
 \end{figure}
 
 \blue{

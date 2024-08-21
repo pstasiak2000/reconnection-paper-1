@@ -30,45 +30,45 @@ Control: page (0) single
 Control: year (1) truncated
 Control: production of eprint (0) enabled
 Warning--empty year in SeeSupplementaryMaterials
-You've used 9 entries,
+You've used 11 entries,
             6079 wiz_defined-function locations,
-            1684 strings with 16469 characters,
-and the built_in function-call counts, 7681 in all, are:
-= -- 543
-> -- 155
-< -- 65
-+ -- 54
-- -- 50
-* -- 1090
-:= -- 721
-add.period$ -- 7
-call.type$ -- 9
-change.case$ -- 35
-chr.to.int$ -- 19
-cite$ -- 12
-duplicate$ -- 751
-empty$ -- 513
-format.name$ -- 80
-if$ -- 1506
+            1700 strings with 17041 characters,
+and the built_in function-call counts, 10160 in all, are:
+= -- 708
+> -- 236
+< -- 78
++ -- 78
+- -- 70
+* -- 1491
+:= -- 947
+add.period$ -- 9
+call.type$ -- 11
+change.case$ -- 45
+chr.to.int$ -- 21
+cite$ -- 14
+duplicate$ -- 977
+empty$ -- 686
+format.name$ -- 126
+if$ -- 2015
 int.to.chr$ -- 1
-int.to.str$ -- 16
-missing$ -- 124
-newline$ -- 73
-num.names$ -- 18
-pop$ -- 321
+int.to.str$ -- 18
+missing$ -- 158
+newline$ -- 79
+num.names$ -- 24
+pop$ -- 408
 preamble$ -- 1
-purify$ -- 34
+purify$ -- 44
 quote$ -- 0
-skip$ -- 349
+skip$ -- 452
 stack$ -- 0
-substring$ -- 193
-swap$ -- 670
-text.length$ -- 15
+substring$ -- 232
+swap$ -- 895
+text.length$ -- 25
 text.prefix$ -- 0
 top$ -- 10
-type$ -- 104
+type$ -- 136
 warning$ -- 2
-while$ -- 29
+while$ -- 34
 width$ -- 0
-write$ -- 111
+write$ -- 129
 (There were 2 warnings)
