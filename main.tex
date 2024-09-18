@@ -139,12 +139,10 @@ experimentally recognized
 that reconnections share a universal property irrespective of the initial
 condition: the minimum distance between reconnecting 
 vortices, $\delta$, scales with time, $t$, according to the form
-
 \begin{equation}
 \label{eq:scaling}
 	\delta^{\pm}(t) = A^{\pm} (\kappa|t-t_0|)^{1/2},
 \end{equation} 
-
 \noindent
 where $t_0$ is the reconnection time, and the dimensionless
 prefactors $A^-$ and $A^+$ refer respectively to before
@@ -174,8 +172,7 @@ We shall show that at non-zero temperatures Eq.~\ref{eq:scaling} and the
 relation $A^+>A-$ hold true, in agreement with experiments. Finally we shall
 show that, when applied to a turbulent superfluid, a vortex
 reconnection is a punctuated energy injection into the normal fluid.
-When applied to turbulence, this last result implies that if the vortex line 
-density (hence the frequency of reconnections) is large enough, vortex
+When applied to turbulence, this last result implies that if the vortex line density (hence the frequency of reconnections) is large enough, vortex
 reconnections can maintain the normal fluid in a perturbed state.
 
 
@@ -226,17 +223,15 @@ reconnections can maintain the normal fluid in a perturbed state.
 \end{figure*}
 
 \paragraph*{Method.---}We follow the approach of Schwarz
-\cite{schwarzThreedimensionalVortexDynamics1988a} which exploits
+\cite{schwarz1988} which exploits
 the vast separation of length scales between the vortex core $a_0$ and any
 other relevant distance, in particular the average distance between vortices,
 $\ell$, in the case of turbulence. Vortex lines are described
 as space curves $\s(\xi,t)$ where $\xi$ is arclength. The equation of motion 
 of the vortex lines is
-
 \begin{equation}
 	\dot{\s}(\xi,t) = \v_s + \frac{\beta}{(1+\beta)}\left[\v_{ns}\cdot \s'\right]\s' + \beta\s'\times\v_{ns}+\beta'\s'\times\left[\s'\times \v_{ns}\right],
 \end{equation}
-
 \noindent
 where $\dot{\s}=\partial\s/\partial t$, $\s'=\partial\s/\partial \xi$ 
 is the unit tangent vector, $\v_{ns}=\v_n - \v_s$, $\v_n$ and $\v_s$ 
@@ -273,7 +268,7 @@ defined by parameters $\Delta l_x$ and $\Delta l_y$.
 The offsets are chosen so that 
 $(\Delta l_x, \Delta l _y) \in \lbrace(0.125i,0.125j)|i,j=-3,\cdots,3 \rbrace$,
 providing us with a total of 49 reconnections for each temperature. 
-The second configuration of two vortex rings of radius $R\approx1$ 
+The second configuration is of two vortex rings of radius $R\approx1$ 
 in a tent-like shape (see Fig. \ref{fig: ring-coll-viz}), 
 making the angle $\alpha$ with the vertical direction. 
 We take 12 realisations of $\alpha$, such that 
@@ -286,17 +281,17 @@ phase of generating these normal fluid structures.
 
 
 \paragraph*{Results.---}
-In the case of the Hopf the interactio between the two rings leads
+In the case of the Hopf link the interaction between the two rings leads
 to a reconnection.  We have performed 147 simulations 
 (49 across 3 temperatures) as shown in Fig. \ref{fig: minimum-distance} and
-verified Eq.~/ref{eq:scaling} for the minium distance $\delta$. 
+verified Eq.~\ref{eq:scaling} for the minium distance $\delta$. 
 The prefactors $A^{\pm}$ have been computed in the shaded region 
 of the figure. In the pre-reconnection regime we observe
 a clear segregation of the values of $A^-$ due to temperature. 
 In stark contrast, there is no memory of the temperature in the
 post-reconnection regime. 
 
-HERE
+\red{HERE}
 Interestingly, the $A^{+}$ distribution does not drastically change when including finite temperature effects, suggesting a minor role of the normal fluid in the reconnection dynamics. Our results confirm the irreversibility of vortex reconnections in our finite temperature model, for which $A^{+}\geq A^{-}$. As shown in Fig. \ref{fig: prefactors}, the $T=0K$ calculation for helium is in good agreement with the Gross-Pitaevskii (GP) model where $A^-\sim0.4$-$0.6$, for both initial conditions. Recent investigation in the classical Navier-Stokes \cite{yaoSeparationScalingViscous2020} have displayed a clear $1/2$ power law scaling and pre-factor ratio $A^-\sim0.3$-$0.4$, which again shows good agreement with the results that we have presented here for finite temperature. 
 
 
@@ -320,17 +315,22 @@ Interestingly, the $A^{+}$ distribution does not drastically change when includi
 The steep energy injection observed at reconnection time in the normal fluid kinetic energy $E_n$ is driven by the violent topological change in the vortex geometry. The coupling mutual fricition force $\mathbf{f}_{ns}(\s)$, in the first approximation $|\mathbf{f}_{ns}|\propto|\dot{\s}-\v_n|\propto\zeta$, where $\zeta=|\s''|$ is the curvature of the vortex line at $\s$. The curvature $\zeta$ spikes when the post-reconnection cusp is created, viciously stirring the normal fluid and generating excitations \cite{stasiakCrossComponentEnergyTransfer2024}, see Fig. \ref{fig: ring-coll-viz}. The prefactor ratio $A^+/A^-$ has been shown in recent literature \cite{villoisIrreversibleDynamicsVortex2020,villoisUniversalNonuniversalAspects2017a,promentMatchingTheoryCharacterize2020} to be of importance in describing fundamental properties of reconnections using the Gross-Pitaevskii (GP) equation. Due to the \emph{ad-hoc} nature of vortex recnnections in our helium model, it is not trivial to derive a linear theory in the limit $\delta^{\pm}\rightarrow0$. 
 
 
-\begin{figure}[H]
+\begin{figure}
 	\centering
 	\includegraphics*[width=0.45\textwidth]{energy-evolution.pdf}
 	\caption{Total normal fluid kinetic energy $E_n$ scaled by the kinetic energy at reconnection time $E_n^0$. Black diamonds represent the simulations with minimum and maximum prefactor ratios $A^+/A^-$ at $T=1.9K$ and $T=2.1K$ respectively.}
+	\label{fig: energy-evol}
 \end{figure}
 
 The total energy injected into the normal fluid by the reconnection $\Delta E_n$, which we refer to as energy jumps, is computed by 
 \begin{equation}
 	\Delta E_n = \max{\left[E_n(t>t_0)\right]} - E_n^0
 \end{equation} 
-where $E_n^0$ is the normal fluid kinetic energy at reconnection time $E_n^0=E_n(t_0)$. The normalised energy jumps are shown in Fig. \ref{fig: energy-jumps}, plotted against the prefactor ratio $A^+/A^-$. Here, we observe that a higher value of $A^+/A^-$, i.e a larger asymmetry in reconnection dynamics, in fact leads to smaller normal fluid excitations during the reconnection procedure. The emission of sound pulses is a common feature of superfluid vortex reconnections \cite{leadbeaterSoundEmissionDue2001b} which is restricted by our incompressible hydrodynamic model. In the local induction approximation, the superfluid kinetic energy is proportional to the length of filaments $E_s\propto L$. To compensate for this expulsion of superfluid kinetic energy, a portion of line length $\Delta L$ is removed during reconnection. At $T=0K$, the absence of a dissipative normal fluid removes any possible sinks of energy, and so ensures that any removal of energy $\Delta E_s\propto \Delta L$. Consequentially, as shown as black diamonds in Fig. \ref{fig: energy-jumps}, the superfluid energy $E_s$ that would be transferred to a sound pulse, $-\Delta L/L_0$, exhibits the same characteristic behaviour as the normal fluid energy injected $\Delta E_n/E_n^0$. Remarkably, the theoretical sound pulse energy $-\Delta L/L_0$ at $T=0K$ is in very good agreement with the energy pulse generated in the GP. 
+where $E_n^0$ is the normal fluid kinetic energy at reconnection time $E_n^0=E_n(t_0)$. The normalised energy jumps are shown in Fig. \ref{fig: energy-jumps}, plotted against the prefactor ratio $A^+/A^-$. Here, we observe that a higher value of $A^+/A^-$, i.e a larger asymmetry in reconnection dynamics, in fact leads to smaller normal fluid excitations during the reconnection procedure. The emission of sound pulses is a common feature of superfluid vortex reconnections \cite{leadbeaterSoundEmissionDue2001b} which is restricted by our incompressible hydrodynamic model. In the local induction approximation, the superfluid kinetic energy is proportional to the length of filaments $E_s\propto L$. To compensate for this expulsion of superfluid kinetic energy, a portion of line length $\Delta L$ is removed during reconnection. At $T=0K$, the absence of a dissipative normal fluid removes any possible sinks of energy, and so ensures that any removal of energy $\Delta E_s\propto \Delta L$. Consequentially, as shown as black diamonds in Fig. \ref{fig: energy-jumps}, the superfluid energy $E_s$ that would be transferred to a sound pulse, $-\Delta L/L_0$, exhibits the same characteristic behaviour as the normal fluid energy injected $\Delta E_n/E_n^0$. Remarkably, the theoretical sound pulse energy $-\Delta L/L_0$ at $T=0K$ is in very good agreement with the energy pulse generated in the GP.
+
+
+A fully developed turbulent tangle of vortices \cite{barenghi2004} can be characterised by the vortex line density $\mathcal{L}$, where the frequency of vortex reconnections $f$ is given by ${f=(\kappa/6\pi)\mathcal{L}^{5/2}\ln(\mathcal{L}^{-1/2}/a_0)}$. From Fig.~\ref{fig: energy-evol} we can define the normal fluid reconnection relaxation time $\tau_n$, to be the time after reconnection at which the normal fluid energy $E_n/E_0$ decays by viscosity to the pre-reconnection level. Using this timescale, we estimate the average vortex line density that is required to sustain the normal fluid in a turbulent state via frequent vortex reconnections to be $\mathcal{L}\sim 8\times10^{7}\mathrm{m}^{-2}$. Experiments in helium-4 \cite{schwarz1981,milliken1982,roche2008,roche2007} and in helium-3 \cite{bradley2006} are capable of reaching a vortex line density several orders of magnitude larger than the estimated value to sustain a turbulent normal fluid state.
+
 
 \begin{figure}
 	\centering
@@ -339,9 +339,8 @@ where $E_n^0$ is the normal fluid kinetic energy at reconnection time $E_n^0=E_n
 	\label{fig: energy-jumps}
 \end{figure}
 
-\blue{
 \paragraph*{Closing remarks.---}
-}
+
 
 \bibliography{references}% Produces the bibliography via BibTeX.
 \end{document}
