@@ -104,11 +104,10 @@
 \author{L. Galantucci}
 \affiliation{Istituto per le Applicazioni del Calcolo ``M. Picone" IAC CNR, Via dei Taurini 19, 00185 Roma, Italy}
 
-\author{W. Guo}
-\author{Y. Xin}
-\author{Y. Alihosseini}
-\affiliation{Department of Mechanical Engineering, FAMU-FSU College of Engineering, Florida State University, Tallahassee, Florida 32310, USA}
-
+\author{\red{W. Guo}}
+\author{\red{Y. Xin}}
+\author{\red{Y. Alihosseini}}
+\affiliation{\red{Department of Mechanical Engineering, FAMU-FSU College of Engineering, Florida State University, Tallahassee, Florida 32310, USA}}
 \date{\today}% It is always \today, today,
              %  but any date may be explicitly specified
 
@@ -117,9 +116,9 @@ The minimum separation between reconnecting vortices
 in fluids and superfluids obeys a universal scaling law with respect to time.
 The pre-reconnection and the post-reconnection prefactors 
 of this scaling law are different, a property related to irreversibility.
-Using experiments and a numeric model which fully accounts for the independent dynamics of the superfluid
+\red{Using experiments and a} numeric model which fully accounts for the independent dynamics of the superfluid
 vortex lines and the thermal normal fluid component, we determine the temperature
-dependence of these prefactors. We also show that each vortex reconnection event
+dependence of these prefactors. We also \red{numerically} show that each vortex reconnection event
 represents a sudden injection of energy in the normal fluid. Finally we argue that
 in a turbulent flow, these punctuated energy injections can sustain the normal fluid
 in a perturbed state, provided that the density of superfluid vortices is large enough.
@@ -165,7 +164,7 @@ in a perturbed state, provided that the density of superfluid vortices is large 
 		\centering
 		\includegraphics*[width=\textwidth]{snap-4.png}
 	\end{subfigure}
-\caption{\red{\emph{Top row:} Experimental images}}
+\caption{\red{\emph{Top row:} Snapshots of experiments, details to be added here.}}
 \emph{Bottom row:} Oblique collision of two circular vortex rings at different 
 (dimensionless) times.
 The superfluid vortex lines are represented by red tubes (the radius has been greatly 
@@ -219,17 +218,13 @@ This acoustic energy loss depends on
 the ratio $A^+/A^-$, which in turns depends on the angle of collision
 between the vortices \cite{villoisIrreversibleDynamicsVortex2020}. 
 
-However most helium experiments
-are performed at temperatures $T>1~\rm K$, a regime in which thermal 
-excitations form a fluid called the {\it normal fluid} which provides a viscous
-route to irreversibility. The aim of this Letter is to investigate
-the role played by the normal fluid in the reconnection dynamics. In particular, given the
-temperature dependence of the normal fluid's properties, we study the temperature
-dependence of the prefactors $A^+$ and $A^-$ and 
-of the energy injected in the normal fluid. 
+However most helium experiments are performed at temperatures $T>1~\rm K$, a regime in which thermal excitations form a fluid called the {\it normal fluid} which provides a viscous route to irreversibility.\red{Modern visualisation techniques rely on active tracer particles to decorate superfluid vortices \cite{paoletti2008velocity,bewley2008,guo2014visualization}. Numerous studies have provided insight into the post-reconnection dynamics and the prefactor $A^{+}$, but much less is known about $A^-$ from experiments due to statistical likelihood of observation in the plane of view.}
 
-To achieve this aim we need a more powerful
-model than the GPE to account not only for the dynamics of the
+The aim of this Letter is to investigate the role played by the normal fluid in the reconnection dynamics. In particular, given the
+temperature dependence of the normal fluid's properties, we study \red{experimentally and numerically} the temperature
+dependence of the prefactors $A^+$ and $A^-$ and \red{numerically investigate} the energy injected in the normal fluid. 
+
+To achieve this aim we need a more powerful model than the GPE to account not only for the dynamics of the
 superfluid vortices, but also for the dynamics of the normal fluid. 
 %The presence of the second, viscous normal fluid leads to a two-fluid 
 %vortex reconnection.
@@ -268,7 +263,7 @@ $\v_{ns}=\v_n - \v_s$,
 and $\beta$, $\beta'$ are temperature and Reynolds number dependent 
 mutual friction coefficients \cite{galantucciNewSelfconsistentApproach2020b}. Superfluid vortices are coupled to a classical description of the 
 incompressible ($\nabla\cdot\v_n=0$) normal fluid via the mutual 
-friction force $\mathbf{F}_{ns}$
+friction force $\mathbf{F}_{ns}$, \red{an internal injection in the Navier-Stokes model}
 
 \begin{equation}
 \label{eq:vn}
@@ -292,7 +287,7 @@ corresponding to the superfluid fractions $\rho_s/\rho=100 \%$,
 $58 \%$ and $26 \%$. To make the equations dimensionless,
 we use the time units $\tau=0.183~\rm s$ at $T=0~\rm K$
 and $1.9~\rm K$, and $\tau=0.242~\rm s$ at $T=2.1~\rm K$. 
-All configurations lead to a vortex reconnection
+All configurations lead to a vortex reconnection.
 The first configuration consists of two vortex rings 
 of (dimensionless) radius $R\approx 1$ in a tent-like shape
 which collide obliquely 
@@ -321,7 +316,7 @@ initially superimposed to match the vortex lines, eliminating the transient
 phase of generating these normal fluid structures.
 
 
-\paragraph*{Scaling law. ---}
+\paragraph*{Scaling law. ---}\red{In the experiment, two reconnections were observed where both $A^+$ and $A^-$ could be identified and calculated, at $T=1.65K$ and $T=2K$, plotted as orange triangles in Fig.~\ref{fig:prefactors}. The pre-reconnection factor $A^-$ lies within the 0.4-0.6 range, consistent with the results of the numerics, and a clear temperature effect between a superfluid component majority and normal fluid component majority.}
 In the case of the Hopf link 
 %the interaction between the two rings leads to a reconnection.  
 we have performed 147 simulations 
@@ -345,7 +340,7 @@ with previous results obtained with the GPE \cite{villoisIrreversibleDynamicsVor
 (green diamonds), showing irreversible dynamics. In addition, the computed values of $A^-\approx 0.4$-$0.6$ at $T=0~{\rm K}$
 are consistent with analytical calculations \cite{boue-etal-2013,rica-2019}. 
 At non-zero temperatures, our results confirm the irreversibility of vortex reconnections 
-observed at $T=0$ as $A^+$ is always larger $A^-$. Importantly, this asymmetry 
+observed at $T=0$ as $A^+$ is always larger than $A^-$. Importantly, this asymmetry 
 is recovered in all our simulations, regardless of their initial condition.
 %Our results confirm the irreversibility of vortex reconnections 
 %\red{($A^+>A^-$)} at non-zero temperatures. 
@@ -362,7 +357,7 @@ Recent investigations of vortex reconnections in classical viscous fluids %the c
 \cite{yaoSeparationScalingViscous2020} also display
 a clear $1/2$ power-law scaling for the minimum distance
 with $A^- \approx 0.3$-$0.4$, which again shows good agreement with our
-results. The scaling law \ref{eq:scaling} and the value of $A^-$ hence appear 
+results. The scaling law (Eq.~\ref{eq:scaling}) and the value of $A^-$ hence appear 
 to have a universal character in vortex reconnections, independently of the nature
 of the fluid, classical or quantum, and temperature.
 
@@ -379,7 +374,7 @@ of the fluid, classical or quantum, and temperature.
 	\end{subfigure}
 	\begin{subfigure}[b]{0.45\textwidth}
 		\centering
-		\includegraphics*[width=\textwidth]{prefactors.pdf}
+		\includegraphics*[width=\textwidth]{prefactors-with-exp.pdf}
 		\caption{}
 		\label{fig:prefactors}
 	\end{subfigure}
@@ -392,15 +387,13 @@ are the regions used to estimate the prefactors $A^{\pm}$.
 The dashed line corresponds to $A^+ = A^-$
 \emph{(b)}: Comparison of all prefactors: Hopf links (\emph{HL}, circles), 
 ring collisions (\emph{RC}, stars with yellow outline), GPE-data 
-from Villois \etal \cite{villoisIrreversibleDynamicsVortex2020} (green diamonds). 
+from Villois \etal \cite{villoisIrreversibleDynamicsVortex2020} (green diamonds) and experimental results from this study (orange triangles). 
 The shaded areas associated with each colour represent the convex hull of errors 
 for each temperature. Schematic rendering of initial conditions are included.}
 \end{figure}
 
 \paragraph*{Energy injection. ---}
-
-The normal fluid impacts the dynamics of reconnecting superfluid vortices via the temperature dependent mutual friction coefficients. Conversely, the motion of superfluid vortices involved in the reconnection process influence, significantly, the dynamics of the normal fluid.
-Fig.~\ref{fig:energy-evol} indeed shows that the normal fluid energy, $E_n$,
+The normal fluid impacts the dynamics of reconnecting superfluid vortices via the temperature dependent mutual friction coefficients. Conversely, the motion of superfluid vortices involved in the reconnection process influence, significantly, the dynamics of the normal fluid. Fig.~\ref{fig:energy-evol} indeed shows that the normal fluid energy, $E_n$,
 suddenly increases at the reconnection time by an amount ($\approx 5\%$)
 which is smaller but comparable to the continuous energy increase as vortex
 lines approach each other. Indeed the
@@ -430,7 +423,7 @@ which are visible in Fig.~\ref{fig:ring-coll-viz}.
 	\includegraphics*[width=0.45\textwidth]{energy-evolution.pdf}
 	\caption{Normal fluid kinetic energy $E_n$ scaled by $E_n^0$ (the 
 kinetic energy at $t=t_0$), plotted versus (dimensionless)
-$\kappa (t-t_0)$. Black diamonds represent the simulations 
+$\kappa (t-t_0)$ for the Hopf link reconnections. Black diamonds represent the simulations 
 with minimum and maximum prefactor ratios $A^+/A^-$ at $T=1.9~\rm K$ and 
 $T=2.1~\rm K$ respectively.}
 	\label{fig:energy-evol}
@@ -482,7 +475,7 @@ is suitable for the investigation of the feature of single reconnection events.
 
 
 \paragraph*{Implications for turbulence. ---}
-Our results have implications for our understanding of 
+Our numerical results have implications for our understanding of 
 quantum turbulence \cite{BSS2023}.
 A fully developed turbulent tangle of vortices is
 characterized by its vortex line density $\mathcal{L}$ (vortex length
@@ -511,18 +504,14 @@ Villois et al. \cite{villoisIrreversibleDynamicsVortex2020}.}
 	\label{fig:energy-jumps}
 \end{figure}
 
-\paragraph*{Conclusions.---} We have conducted a statistical study
-of vortex reconnections in a wide range of temperatures using a model of $^4$He
-which accounts for the coupled dynamics of superfluid and normal fluid
-components.
+\paragraph*{Conclusions.---} \red{We have conducted an experiment using active particle tracers} and a statistical numerical study
+of vortex reconnections in a wide range of temperatures using a model of $^4$He which accounts for the coupled dynamics of superfluid and normal fluid components.
 We have verified the scaling law of the minimum vortex distance 
-$\delta^{\pm}=A^{\pm} (\kappa |t-t_0|)^{1/2}$ and found that the approach 
-prefactor $A^-$ 
-has a clear temperature dependence independent of the geometry, in contrast to the
+$\delta^{\pm}=A^{\pm} (\kappa |t-t_0|)^{1/2}$ and found that the approach prefactor $A^-$ has a clear temperature dependence independent of the geometry \red{in both experiments and numerics}, in contrast to the
 separation prefactor $A^+$. The prefactors are in good agreement
 with GPE simulations \cite{villoisIrreversibleDynamicsVortex2020,allen2014} 
 and classical fluid reconnections \cite{yaoSeparationScalingViscous2020}
-revealing that vortex reconnection display a universal behaviour regardless of the nature
+revealing that vortex reconnections display a universal behaviour regardless of the nature
 of the fluid (classical or quantum) and of temeperature. It is worth noting that the behaviour, as a function of $A^+/A^-$, of 
 the energy injected in the normal fluid (at $T>0$) and of the energy transferred to sound (at $T=0$)
 \cite{villoisIrreversibleDynamicsVortex2020,leadbeaterSoundEmissionDue2001b} is dissimilar: the former decreases as $A^+/A^-$
