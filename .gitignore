@@ -61,5 +61,5 @@ Thumbs.db
 *.fdb_latexmk
 *.blg
 
-#Specific files to ignore
-recon-paper-1.bib
+#Zipped files
+*.zip
