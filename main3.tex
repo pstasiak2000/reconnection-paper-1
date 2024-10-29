@@ -20,7 +20,7 @@
 %
 \documentclass[%
  reprint,
-% superscriptaddress,
+%superscriptaddress,
 %groupedaddress,
 %unsortedaddress,
 %runinaddress,
@@ -215,13 +215,13 @@ related to irreversibility \cite{villoisIrreversibleDynamicsVortex2020,promentMa
 \cite{leadbeaterSoundEmissionDue2001b,zuccherQuantumVortexReconnections2012a} which removes some of the kinetic energy and momentum of the vortex configuration.
 This vortex energy loss depends on
 the ratio $A^+/A^-$, which in turns defines the approaching angle of collision
-between the vortices and several geometrical quantities \cite{villoisUniversalNonuniversalAspects2017a,promentMatchingTheoryCharacterize2020}. 
+between the vortices, together with other several geometrical quantities \cite{villoisUniversalNonuniversalAspects2017a,promentMatchingTheoryCharacterize2020}. 
 
 The temporal asymmetry $A^+>A^-$ can be thus interpreted as a non-trivial manifestation of irreversibility, as it originates from an ideal hydrodynamic process independent of the small-scale regularisation mechanism of the fluid.
 %
-Indeed, in classical fluid vortex reconnections, although the definition of $A^+$ is more delicate as circulation is not necessarily conserved, the same asymmetry $A^+>A^-$ was reported \cite{yaoSeparationScalingViscous2020}. Instead of the generation of rarefaction pulses, like in the case of $T=0$ superfluids, close to the reconnections, the classical fluid creates a series of thin secondary structures that can be efficiently dissipated by viscous dissipation.
+Indeed, in classical fluid vortex reconnections, although the definition of $A^+$ is more delicate as circulation is not necessarily conserved, the same asymmetry $A^+>A^-$ was reported \cite{yaoSeparationScalingViscous2020}. Instead of the generation of rarefaction pulses, like in the case of $T=0$ superfluids, close to the reconnection, the classical fluid creates a series of thin secondary structures that can be then efficiently dissipated by viscous dissipation.
 
-The case of superfluid helium is more intriguing. Most experiments are performed at temperatures $T>1~\rm K$, a regime in which in addition to quantum vortices, thermal excitations constitute a viscous liquid called the {\it normal fluid}, which can steal energy from filaments, opening more routes towards irreversibility. Modern visualisation techniques rely on active tracer particles to decorate superfluid vortices \cite{paoletti2008velocity,bewley2008,guo2014visualization,perettiDirectVisualizationQuantum2023}. Numerous studies have provided insight into the post-reconnection dynamics and the prefactor $A^{+}$, but much less is known about $A^-$ from experiments due to statistical likelihood of observation in the plane of view.
+The case of superfluid helium is more intriguing. Most experiments are performed at temperatures $T>1~\rm K$, a regime in which in addition to quantum vortices, thermal excitations constitute a viscous liquid called the {\it normal fluid}. The normal fluid can steal energy from filaments and dissipate it by viscous effects, opening in that way more routes towards irreversibility. Modern visualisation techniques rely on active tracer particles to decorate superfluid vortices \cite{paoletti2008velocity,bewley2008,guo2014visualization,perettiDirectVisualizationQuantum2023}. Numerous studies have provided insight into the post-reconnection dynamics and the prefactor $A^{+}$, but much less is known about $A^-$ from experiments due to statistical likelihood of observation in the plane of view.
 
 The aim of this Letter is to investigate the role played by the normal fluid in the reconnection dynamics. In particular, given the temperature dependence of the normal fluid's properties, we study experimentally and numerically the temperature dependence of the prefactors $A^+$ and $A^-$ and numerically investigate the energy injected in the normal fluid. 
 %
@@ -242,7 +242,7 @@ is large enough, vortex
 reconnections can maintain the normal fluid in a perturbed state.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\paragraph*{Experimental Method.---} \NOTE{Add details of the experimental method here.} Note that GP simulations reported that particles trapped inside vortices do not drastically affect vortex reconnections \cite{GiuriatoQuantumVortexReconnections2020}. Whereas in the particle-vortex system, vortex energy and momentum are also transferred to particles, these additional mechanism do not modify the approaching rates. This argument was supported by a scaling symmetry of the system which allows to draw conclusion for length-scales relevant to experiments. 
+\paragraph*{Experimental Method.---} \NOTE{Add details of the experimental method here.} Note that GP simulations reported that particles trapped inside vortices do not drastically affect vortex reconnections \cite{GiuriatoQuantumVortexReconnections2020}. Whereas in the particle-vortex system, vortex energy and momentum are also transferred to particles, these additional mechanisms do not modify the approaching rates. This argument was also supported by a scaling symmetry of the system which allows to draw conclusion for length-scales relevant to experiments. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \paragraph*{Numerical Method.---}We follow the approach of Schwarz \cite{schwarz1988} which exploits
@@ -267,7 +267,7 @@ mutual friction coefficients \cite{galantucciNewSelfconsistentApproach2020b}. Th
 	\frac{\partial \v_n}{\partial t} + (\v_n\cdot\nabla)\v_n = 
         -\frac{1}{\rho} \nabla p + \nu_n\nabla^2\v_n + \frac{\mathbf{F}_{ns}}{\rho_n},
 \end{equation}
-where $\mathbf{F}_{ns}$ is the mutual friction force that couples the normal fluid and the superfluid vortices, and acts as an internal injection mechanism. In Eq.~\eqref{eq:vn}, $\rho=\rho_n + \rho_s$, where $\rho_n$ an $\rho_s$ are the normal fluid and superfluid densities, $p$ is the pressure, 
+where $\mathbf{F}_{ns}$ is the mutual friction force that couples the normal fluid and the superfluid vortices, and acts as an internal injection mechanism. In Eq.~\eqref{eq:vn}, $\rho=\rho_n + \rho_s$, where $\rho_n$ and $\rho_s$ are the normal fluid and superfluid densities, $p$ is the pressure, 
 and $\nu_n$ is the kinematic viscosity of the normal fluid. 
 Equations~(\ref{eq:s}) and (\ref{eq:vn})
 are solved in dimensionless form by rescaling them by the characteristic time $\tau$ and length $\lambda$. 
