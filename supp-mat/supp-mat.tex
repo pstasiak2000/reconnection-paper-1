@@ -58,15 +58,16 @@ prb,
 \begin{document}
 \preprint{APS/123-QED}
 
-\title{Supplementary Materials: \blue{Superfluid vortex reconnections at non-zero temperatures - TBD}}
+\title{Supplementary Materials: Experimental and theoretical evidence of universality in superfluid vortex
+reconnections}
 
 \author{P. Z. Stasiak}
 \affiliation{School of Mathematics, Statistics and Physics, Newcastle University, Newcastle upon Tyne, NE1 7RU, United Kingdom}
 
 \author{Y. Xing}
 \author{Y. Alihosseini}
-\affiliation{\red{National High Magnetic Field Laboratory, 1800 East Paul Dirac Drive, Tallahassee, Florida 32310, USA}}
-\affiliation{\red{Mechanical Engineering Department, FAMU-FSU College of Engineering, Tallahassee, Florida 32310, USA}}
+\affiliation{National High Magnetic Field Laboratory, 1800 East Paul Dirac Drive, Tallahassee, Florida 32310, USA}
+\affiliation{Mechanical Engineering Department, FAMU-FSU College of Engineering, Tallahassee, Florida 32310, USA}
 
 
 \author{C.F. Barenghi}
@@ -74,8 +75,8 @@ prb,
 \affiliation{School of Mathematics, Statistics and Physics, Newcastle University, Newcastle upon Tyne, NE1 7RU, United Kingdom}
 
 \author{W. Guo}
-\affiliation{\red{National High Magnetic Field Laboratory, 1800 East Paul Dirac Drive, Tallahassee, Florida 32310, USA}}
-\affiliation{\red{Mechanical Engineering Department, FAMU-FSU College of Engineering, Tallahassee, Florida 32310, USA}}
+\affiliation{National High Magnetic Field Laboratory, 1800 East Paul Dirac Drive, Tallahassee, Florida 32310, USA}
+\affiliation{Mechanical Engineering Department, FAMU-FSU College of Engineering, Tallahassee, Florida 32310, USA}
 
 
 \author{L. Galantucci}
@@ -89,7 +90,7 @@ prb,
 
 \section{Experimental Method}
 
-\red{To produce solidified deuterium ($\rm D_2$) tracer particles, we slowly inject a gas mixture of $5\%$ $\rm D_2$ and $95\%$ ${}^{4}\rm He$ into a superfluid helium bath. Our gas injection system is similar to that described by Fonda et al. \cite{fonda2016injection}. A solenoid valve is installed to control the duration of the gas injection, and a needle valve is used to regulate the gas flow rate. The injected $\rm D_2$ gas solidifies into small ice particles with a mean radius of 1.1 $\mu \rm m$, derived from the particle settling velocities in quiescent superfluid helium \cite{tang2023visualization}. A 473 nm continuous-wave laser sheet (thickness: $0.8~\rm mm$) illuminates the particles, and their motion in the laser sheet plane is recorded by a camera at 200 frames per second with a maximum resolution of $2560 \times 1440$ pixels. We then identify vortex reconnection events from the recorded videos, and manually track the coordinates of the trapped particles for the pre- (if captured) and post-reconnection. Knowing the particle coordinates, the minimum distance between the reconnecting vortices $\delta^{\pm}(t)$ can be measured. We calculate the prefactors $A^\pm$ using the slopes of linear fits to the $\delta^2(t)$ data.}
+To produce solidified deuterium ($\rm D_2$) tracer particles, we slowly inject a gas mixture of $5\%$ $\rm D_2$ and $95\%$ ${}^{4}\rm He$ into a superfluid helium bath. Our gas injection system is similar to that described by Fonda et al. \cite{fonda2016injection}. A solenoid valve is installed to control the duration of the gas injection, and a needle valve is used to regulate the gas flow rate. The injected $\rm D_2$ gas solidifies into small ice particles with a mean radius of 1.1 $\mu \rm m$, derived from the particle settling velocities in quiescent superfluid helium \cite{tang2023visualization}. A 473 nm continuous-wave laser sheet (thickness: $0.8~\rm mm$) illuminates the particles, and their motion in the laser sheet plane is recorded by a camera at 200 frames per second with a maximum resolution of $2560 \times 1440$ pixels. We then identify vortex reconnection events from the recorded videos, and manually track the coordinates of the trapped particles for the pre- (if captured) and post-reconnection. Knowing the particle coordinates, the minimum distance between the reconnecting vortices $\delta^{\pm}(t)$ can be measured. We calculate the prefactors $A^\pm$ using the slopes of linear fits to the $\delta^2(t)$ data.
 
 \section{Numerical Method}
 
@@ -97,6 +98,7 @@ prb,
 	\centering
 	\includegraphics[width=0.9\textwidth]{init-cond-schem.png}
 	\caption{Schematic diagram for numeric initial condition. \emph{Left:} Hopf-link. \emph{Right:} Oblique collision.}
+	\label{fig: ring-coll-viz}
 \end{figure}
 Using Schwarz mesoscopic model \cite{schwarzThreedimensionalVortexDynamics1988a}, vortex lines can be described as space curves $\s(\xi,t)$ of infinitesimal thickness, with a single quantum of circulation $\kappa=h/m_4=9.97\times10^{-8}\text{m}^2/\text{s}$, where $h$ is Planck's constant, $m_4=6.65\times10^{-27}\text{kg}$ is the mass of one helium atom, $\xi$ is the natural parameterisation, arclength, and $t$ is time. These conditions are a good approximation, since the vortex core radius of superfluid \textsuperscript{4}He($a_0=10^{-10}\text{m}$) is much smaller than any of the length scale of interest in turbulent flows. The equation of motion is
 \begin{equation}
