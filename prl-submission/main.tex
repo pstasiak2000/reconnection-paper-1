@@ -1,0 +1,1075 @@
+% ****** Start of file apssamp.tex ******
+%
+%   This file is part of the APS files in the REVTeX 4.2 distribution.
+%   Version 4.2a of REVTeX, December 2014
+%
+%   Copyright (c) 2014 The American Physical Society.
+%
+%   See the REVTeX 4 README file for restrictions and more information.
+%
+% TeX'ing this file requires that you have AMS-LaTeX 2.0 installed
+% as well as the rest of the prerequisites for REVTeX 4.2
+%
+% See the REVTeX 4 README file
+% It also requires running BibTeX. The commands are as follows:
+%
+%  1)  latex apssamp.tex
+%  2)  bibtex apssamp
+%  3)  latex apssamp.tex
+%  4)  latex apssamp.tex
+%
+\documentclass[%
+ reprint,
+%superscriptaddress,
+%groupedaddress,
+unsortedaddress,
+%runinaddress,
+%frontmatterverbose, 
+%preprint,
+%preprintnumbers,
+%nofootinbib,
+%nobibnotes,
+%bibnotes,
+ amsmath,amssymb,
+ aps,
+ prl,
+%pra,
+% prb,
+% rmp,
+%prstab,
+%prstper,
+%floatfix,
+]{revtex4-2}
+
+\usepackage{graphicx}% Include figure files
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}% bold math
+\usepackage{blindtext}
+\usepackage{float}
+\usepackage{caption,cancel}
+\usepackage{cleveref}
+\usepackage{subcaption}
+\usepackage{xcolor}
+%\usepackage{hyperref}% add hypertext capabilities
+%\usepackage[mathlines]{lineno}% Enable numbering of text and display math
+%\linenumbers\relax % Commence numbering lines
+
+%\usepackage[showframe,%Uncomment any one of the following lines to test 
+%%scale=0.7, marginratio={1:1, 2:3}, ignoreall,% default settings
+%%text={7in,10in},centering,
+%%margin=1.5in,
+%%total={6.5in,8.75in}, top=1.2in, left=0.9in, includefoot,
+%%height=10in,a5paper,hmargin={3cm,0.8in},
+%]{geometry}
+
+
+\newcommand{\etal}{{\it et al.}~}
+\newcommand{\bom}{\boldsymbol{\omega}}
+
+% \newcommand{\sd}[3][\null]{\ensuremath{\dfrac{\d^{#1} #2}{\d #3^{#1}}}}%Standard derivative 
+% \newcommand{\pd}[3][\null]{\ensuremath{\dfrac{\partial^{#1} #2}{\partial #3^{#1}}}}%Partial derivative
+% \newcommand{\matd}[2][\null]{\ensuremath{\dfrac{\mathrm{D}^{#1} #2}{\mathrm{D} t^{#1}}}} %Material derivative
+
+\def \s{\mathbf{s}}
+\def \v{\mathbf{v}}
+\def \x{\mathbf{x}}
+\def \r{\mathbf{r}}
+\def \k{\mathbf{k}}
+
+\def \cm{\mathrm{cm}}
+\def \cms{\mathrm{cm/s}}
+\def \sec{\mathrm{s}}
+\def \K{\mathrm{K}}
+
+\def\red#1{\textcolor{red}{#1}}
+\def\blue#1{\textcolor{blue}{#1}}
+\def\magenta#1{\textcolor{magenta}{#1}}
+\newcommand*{\NOTE}[1]{\textbf{\color{red}[#1]}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\begin{document}
+
+\preprint{APS/123-QED}
+
+\title{Experimental and theoretical evidence of universality in superfluid vortex reconnections}
+
+\author{P. Z. Stasiak}
+\affiliation{School of Mathematics, Statistics and Physics, Newcastle University, Newcastle upon Tyne, NE1 7RU, United Kingdom}
+
+\author{Y. Xing}
+\author{Y. Alihosseini}
+\affiliation{National High Magnetic Field Laboratory, 1800 East Paul Dirac Drive, Tallahassee, Florida 32310, USA}
+\affiliation{Mechanical Engineering Department, FAMU-FSU College of Engineering, Tallahassee, Florida 32310, USA}
+
+\author{C.F. Barenghi}
+\author{A. Baggaley}
+\affiliation{School of Mathematics, Statistics and Physics, Newcastle University, Newcastle upon Tyne, NE1 7RU, United Kingdom}
+
+\author{W. Guo}
+\affiliation{National High Magnetic Field Laboratory, 1800 East Paul Dirac Drive, Tallahassee, Florida 32310, USA}
+\affiliation{Mechanical Engineering Department, FAMU-FSU College of Engineering, Tallahassee, Florida 32310, USA}
+
+\author{L. Galantucci}
+\affiliation{Istituto per le Applicazioni del Calcolo ``M. Picone" IAC CNR, Via dei Taurini 19, 00185 Roma, Italy}
+\affiliation{School of Mathematics, Statistics and Physics, Newcastle University, Newcastle upon Tyne, NE1 7RU, United Kingdom}
+
+\author{G. Krstulovic}
+\affiliation{Universit\'e C\^ote d'Azur, Observatoire de la C\^ote d'Azur, CNRS,Laboratoire Lagrangre, Boulevard de l'Observatoire CS 34229 - F 06304 NICE Cedex 4, France}
+
+
+\date{\today}% It is always \today, today,
+             %  but any date may be explicitly specified
+
+\begin{abstract}
+The minimum separation between reconnecting vortices
+in fluids and superfluids obeys a universal scaling law with respect to time.
+The pre-reconnection and the post-reconnection prefactors 
+of this scaling law are different, a property related to irreversibility and to energy
+transfer and dissipation mechanisms.
+In the present work, we determine the temperature dependence of these prefactors in superfluid helium
+from experiments and a numeric model which fully accounts for the 
+coupled dynamics of the superfluid
+vortex lines and the thermal normal fluid component. At all temperatures, we observe 
+a pre- and post-reconnection asymmetry similar to that observed in other superfluids
+and in classical viscous fluids, indicating that vortex reconnections display a
+universal behaviour independent of 
+the small-scale regularising dynamics.   
+We also numerically show that each vortex reconnection event
+represents a sudden injection of energy in the normal fluid. 
+Finally we argue that
+in a turbulent flow, these punctuated energy injections can sustain 
+the normal fluid
+in a perturbed state, provided that the density of superfluid vortices is large enough.
+\end{abstract}
+
+%\keywords{Suggested keywords}%Use showkeys class option if keyword
+   %display desired
+\maketitle
+
+\begin{figure*}[t]
+	\centering
+	\begin{subfigure}[b]{0.24\textwidth}
+		\centering
+		\includegraphics*[width=\textwidth]{exp-snap-1.pdf}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.24\textwidth}
+		\centering
+		\includegraphics*[width=\textwidth]{exp-snap-2.pdf}
+	\end{subfigure}
+    \begin{subfigure}[b]{0.24\textwidth}
+		\centering
+		\includegraphics*[width=\textwidth]{exp-snap-3.pdf}
+	\end{subfigure}
+    \begin{subfigure}[b]{0.24\textwidth}
+		\centering
+		\includegraphics*[width=\textwidth]{exp-snap-4.pdf}
+	\end{subfigure}
+	\hfill
+    \vspace{0.5cm}
+	\begin{subfigure}[b]{0.24\textwidth}
+		\centering
+		\includegraphics*[width=\textwidth]{snap-1.png}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.24\textwidth}
+		\centering
+		\includegraphics*[width=\textwidth]{snap-2.png}
+	\end{subfigure}
+    \begin{subfigure}[b]{0.24\textwidth}
+		\centering
+		\includegraphics*[width=\textwidth]{snap-3.png}
+	\end{subfigure}
+    \begin{subfigure}[b]{0.24\textwidth}
+		\centering
+		\includegraphics*[width=\textwidth]{snap-4.png}
+	\end{subfigure}
+\caption{\emph{Top row:} Images showing tracer particles trapped on reconnecting vortices in superfluid helium at 1.65 K. The arrows denote the vortices before and after the reconnection. The first two images show that the vortices approach each other before the reconnection, which occurs at $t=0.58$ s. After the reconnection, the resulting vortices start to move apart, as shown in the last two images.
+\emph{Bottom row:} Oblique collision of two circular vortex rings at different 
+(dimensionless) times, here in units of $\tau=0.183$s.
+The superfluid vortex lines are represented by red tubes (the radius has been greatly 
+exaggerated for visual purposes); the scaled normal fluid enstrophy 
+$\bom^2/\bom^2_{max}$ is represented by the blue volume rendering.}
+\label{fig:ring-coll-viz}
+\end{figure*}
+
+\paragraph*{Introduction.---} Reconnections are the fundamental events that
+change the topology of the field lines in fluids and plasmas during their
+time evolution. Reconnections
+thus determine important physical properties, 
+such as mixing and inter-scale energy transfer in fluids \cite{YaoHussainAnnRev2022}, 
+or solar flares and tokamak instabilities
+in plasmas \cite{Chapman2010}. The nature of reconnections is more clearly
+studied if the field lines are concentrated in well-separated
+filamentary structures:
+vortices in fluids and magnetic flux tubes in plasmas. In superfluid 
+helium this concentration is extreme, providing an ideal context:
+superfluid vorticity is confined to vortex lines of atomic thickness 
+(approximately $a_0 \approx 10^{-10}~\rm m$); a further simplification 
+is that, unlike what happens in ordinary fluids, the
+circulation of a superfluid vortex  is constrained to the quantized value
+$\kappa=h/m=9.97 \times 10^{-8}~\rm m^2/s$, 
+where $m$ is the mass of one helium atom and $h$ is Planck's constant. 
+
+It was in this superfluid context that it was theoretically and experimentally recognized
+\cite{nazarenko2003,bewley2008,paoletti2010,zuccherQuantumVortexReconnections2012a,villoisUniversalNonuniversalAspects2017a,galantucciCrossoverInteractionDriven2019a,tylutki2021universal}
+that reconnections share a universal property irrespective of the initial
+condition: the minimum distance between reconnecting 
+vortices, $\delta^{\pm}$, scales with time, $t$, according to the form
+\begin{equation}
+\label{eq:scaling}
+	\delta^{\pm}(t) = A^{\pm} (\kappa|t-t_0|)^{1/2},
+\end{equation} 
+\noindent
+where $t_0$ is the reconnection time, and the dimensionless
+prefactors $A^-$ and $A^+$ refer respectively to before
+($t<t_0$) and after ($t>t_0$) the reconnection. The same scaling law
+was then found for reconnections in ordinary viscous fluids 
+\cite{yaoSeparationScalingViscous2020}. In the case of a pure
+superfluid at temperature $T=0~\rm K$, theoretical work based on
+the Gross-Pitaevskii equation (GPE) has shown that
+$A^+>A^-$, that is, after the reconnection, vortex lines move away from 
+each others faster than in the initial approach; this result has been
+related to irreversibility \cite{villoisIrreversibleDynamicsVortex2020,promentMatchingTheoryCharacterize2020}. Indeed, a geometrical constraint imposes 
+\cite{promentMatchingTheoryCharacterize2020}
+that a piece of vortex length needs to be ``deleted'' 
+during the reconnection process. In the GP model, this loss is possible 
+by the emission of a rarefaction pulse created immediately after 
+the reconnection
+\cite{leadbeaterSoundEmissionDue2001b,zuccherQuantumVortexReconnections2012a} which removes some of the kinetic energy and momentum of the vortex configuration.
+This vortex energy loss depends on
+the ratio $A^+/A^-$, which in turns defines the approaching angle of collision
+between the vortices, together with other several geometrical quantities \cite{villoisUniversalNonuniversalAspects2017a,promentMatchingTheoryCharacterize2020}. 
+
+The temporal asymmetry $A^+>A^-$ can be thus interpreted as a non-trivial manifestation of irreversibility, as it originates from an ideal hydrodynamic process independent of the small-scale regularisation mechanism of the fluid.
+%
+Indeed, in classical fluid vortex reconnections, although the definition of $A^+$ is more delicate as circulation is not necessarily conserved, the same asymmetry $A^+>A^-$ was reported \cite{yaoSeparationScalingViscous2020}. Instead of the generation of rarefaction pulses, like in the case of $T=0$ superfluids, close to the reconnection, the classical fluid creates a series of thin secondary structures that can be then efficiently dissipated by viscous dissipation.
+
+The case of superfluid helium at non-zero temperatures
+is more intriguing. Most experiments are performed at $T>1~\rm K$, a regime in which in addition to quantum vortices, thermal excitations constitute a viscous liquid called the {\it normal fluid}. The normal fluid can steal energy from filaments and dissipate it by viscous effects, opening in that way more routes towards irreversibility. Modern visualisation techniques rely on hydrogen/deuterium tracer particles to decorate superfluid vortices \cite{paoletti2008velocity,bewley2008,guo2014visualization,perettiDirectVisualizationQuantum2023}. Numerous studies have provided insight into the post-reconnection dynamics and the prefactor $A^{+}$, but much less is known about $A^-$ from experiments due to the challenges of visualising vortices approaching a reconnection.
+
+The aim of this Letter is to investigate the role played by the normal fluid in the reconnection dynamics. In particular, given the temperature dependence of the normal fluid's properties, we study experimentally and numerically the temperature dependence of the prefactors $A^+$ and $A^-$ and numerically investigate the energy injected in the normal fluid. 
+%
+To achieve this aim we need a more powerful model than the GPE to account not only for the dynamics of the
+superfluid vortices, but also for the dynamics of the normal fluid. 
+%The presence of the second, viscous normal fluid leads to a two-fluid 
+%vortex reconnection.
+We show that at non-zero temperatures Eq.~(\ref{eq:scaling}) and the
+relation $A^+>A^-$ hold true, in agreement with experiments, revealing, for the 
+first time, a temperature dependence of $A^+/A^-$. In addition, we
+show that a vortex
+reconnection represents an unusual kind of
+punctuated energy injection into the normal fluid which acts alongside
+the well-known (continual) friction.
+When applied to superfluid turbulence, this last result implies that,
+if the vortex line density (hence the frequency of reconnections) 
+is large enough, vortex
+reconnections can maintain the normal fluid in a perturbed state.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\paragraph*{Experimental Method.---} To visualize the reconnection 
+dynamics, we decorate the vortices using solidified deuterium 
+($\rm{D_2}$) tracer particles of density $202.8~\rm{kg/m^3}$ 
+\cite{xu2008density}) and mean radius $1.1\times10^{-6}~\rm m$ 
+\cite{tang2023visualization,tang2021visualization}. These particles
+are generated by injecting a $\rm D_2$/${}^{4}\rm He$ gas mixture into 
+the superfluid helium bath 
+%through a gas injection system 
+\cite{tang2023visualization,fonda2016injection} 
+as described in the Supplementary 
+Material (SM).
+%\cite{SeeSupplementaryMaterials} for more details). 
+When the particles are near the vortices,
+they become trapped inside their cores
+because of the Bernoulli pressure arising from the 
+circulating superfluid flow.
+% around the vortex cores. 
+A thin laser sheet is used to illuminate the particles, and their motion 
+is recorded at 200 Hz by a camera positioned at a right angle to the laser 
+sheet. A high-quality reconnection event, observed at $T=1.65~\rm K$ 
+and capturing both the pre- and post-reconnection dynamics, is shown 
+in  Fig.~\ref{fig:ring-coll-viz} as an example. Note that according 
+to GP simulations \cite{GiuriatoQuantumVortexReconnections2020} the transfer 
+of energy and momentum between particle and vortex does not modify
+the approaching rates significantly. Reconnection events reported in this
+work have been captured in multiple experiments, either following particle 
+injection or long time (\textit{i.e.}, 30-60 s) after towing a grid through superfluid helium. 
+% Whereas in the particle-vortex system, vortex energy and momentum 
+%are also transferred to particles, these additional mechanisms do not 
+%modify the approaching rates 
+(this is also supported by the scaling symmetry 
+of the system which allows to draw conclusion for length-scales relevant 
+to experiments). 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\paragraph*{Numerical Method.---}We follow the approach of Schwarz \cite{schwarz1988} which exploits
+the vast separation of length scales between the vortex core $a_0$ and any
+other relevant distance, in particular the average distance between vortices,
+$\ell$, in the case of turbulence. Vortex lines are described
+as space curves $\s(\xi,t)$ where $\xi$ is arclength. The equation of motion 
+of the vortex lines is
+\begin{equation}
+\label{eq:s}
+	\dot{\s}(\xi,t) = \v_s + \frac{\beta}{(1+\beta)}\left[\v_{ns}\cdot \s'\right]\s' + \beta\s'\times\v_{ns}+\beta'\s'\times\left[\s'\times \v_{ns}\right],
+\end{equation}
+%
+where $\dot{\s}=\partial\s/\partial t$, $\s'=\partial\s/\partial \xi$ 
+is the unit tangent vector, 
+$\v_n$ and $\v_s$ are the normal fluid and superfluid velocities at $\s$,
+$\v_{ns}=\v_n - \v_s$, and $\beta$, $\beta'$ are temperature and Reynolds number dependent 
+mutual friction coefficients \cite{galantucciNewSelfconsistentApproach2020b}. The normal fluid velocity $\v_n$ is described as a classical fluid obeying the incompressible ($\nabla\cdot\v_n=0$) Navier-Stokes equations:
+%
+\begin{equation}
+\label{eq:vn}
+	\frac{\partial \v_n}{\partial t} + (\v_n\cdot\nabla)\v_n = 
+        -\frac{1}{\rho} \nabla p + \nu_n\nabla^2\v_n + \frac{\mathbf{F}_{ns}}{\rho_n},
+\end{equation}
+where $\mathbf{F}_{ns}$ is the mutual friction force that couples the normal fluid and the superfluid vortices, and acts as an internal injection mechanism. In Eq.~\eqref{eq:vn}, $\rho=\rho_n + \rho_s$, where $\rho_n$ and $\rho_s$ are the normal fluid and superfluid densities, $p$ is the pressure, 
+and $\nu_n$ is the kinematic viscosity of the normal fluid. 
+Equations~(\ref{eq:s}) and (\ref{eq:vn})
+are solved in dimensionless form by rescaling them by the characteristic time $\tau$ and length $\lambda$. 
+The algorithm for vortex reconnections is standard
+\cite{baggaleySensitivityVortexFilament2012a}. We consider two distinct initial vortex configurations
+at three temperatures $T=0~\rm K$, $1.9~\rm K$ and $2.1~\rm K$
+corresponding to the superfluid fractions $\rho_s/\rho=100 \%$,
+$58 \%$ and $26 \%$. To compare with experiments, the unit of length is set to $\lambda=1.59 \times 10^{-4}~\rm m$, and the time units to $\tau=0.183~\rm s$ at $T=0~\rm K$ and $1.9~\rm K$, and $\tau=0.242~\rm s$ at $T=2.1~\rm K$, 
+see also the SM for details.
+%\cite{SeeSupplementaryMaterials} for details.
+All configurations lead to a vortex reconnection.
+The first configuration consists of two vortex rings 
+of (dimensionless) radius $R\approx 1$ in a tent-like shape
+which collide obliquely 
+making an initial angle $\alpha$ with the vertical direction, 
+as shown in Fig.~\ref{fig:ring-coll-viz}, and,
+schematically, in Fig.~\ref{fig:prefactors}.   
+By changing the parameter $\alpha$, we create a sample of 12 realizations
+at each temperature (again, see the SM for details).
+%\cite{SeeSupplementaryMaterials} for details).
+%We take 12 realizations of $\alpha$, such that 
+%$\alpha\in\lbrace i\pi/13|i=1,\cdots,12\rbrace$. 
+%The supplementary material 
+%gives more details of our model and these configurations
+%\cite{SeeSupplementaryMaterials}. 
+The second configuration is the Hopf link, shown schematically in Fig.~\ref{fig:prefactors}. It consists of two perpendicular linked rings of radius $R\approx1$ with an offset in the $xy$-plane.
+By changing the offset, we create a sample of 49 reconnections
+at each temperature, as described in the SM.
+%\cite{SeeSupplementaryMaterials}.
+%defined by parameters $\Delta l_x$ and $\Delta l_y$ 
+%The offsets are chosen so that 
+%$(\Delta l_x, \Delta l _y) \in \lbrace(0.125i,0.125j)|i,j=-3,\cdots,3 \rbrace$,
+%providing us with a total of 49 reconnections for each temperature. 
+In all cases, normal fluid structures generated by moving superfluid vortex rings \cite{kivotides-barenghi-samuels-2000}, are initially prepared to eliminate any potential transients.
+
+\begin{figure}[t]
+	\centering
+	\begin{subfigure}[b]{0.45\textwidth}
+		\centering
+		\includegraphics*[width=\textwidth]{min-delta-with-exp.pdf}
+		\caption{}
+		\label{fig:minimum-distance}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.45\textwidth}
+		\centering
+		\includegraphics*[width=\textwidth]{prefactors-with-exp.pdf}
+		\caption{}
+		\label{fig:prefactors}
+	\end{subfigure}
+\caption{\emph{(a)}: Time evolution of the (dimensionless)
+minimum distance squared $\delta^2$ plotted versus (dimensionless) $\kappa (t-t_0)$ for
+the Hopf link reconnections at $T=0K,1.9K$ and $2.1K$ (black, blue and red
+respectively). The grey shaded areas
+are the regions used to estimate the prefactors $A^{\pm}$. 
+\emph{Inset:} Experimental superfluid helium data.
+\emph{(b)}: Comparison of all prefactors: Hopf links (\emph{HL}, circles), 
+ring collisions (\emph{RC}, stars with yellow outline), GPE-data 
+from Villois \etal \cite{villoisIrreversibleDynamicsVortex2020} (green diamonds) and experimental results from this study (triangles and vertical dot-dashed lines). 
+The shaded areas associated with each colour represent the convex hull of errors 
+for each temperature and the black dashed line represents the theoretical bound for $A^+/A^-$. Schematic rendering of initial conditions are included.}
+\end{figure}
+
+
+\paragraph*{Scaling law. ---}In the experiment, two reconnections were observed where both $A^+$ and $A^-$ could be identified and calculated, at $T=1.65K$ and $T=2K$, plotted as orange triangles in Fig.~\ref{fig:prefactors}. We also analysed six additional experimental observations of the \emph{post-reconnection} dynamics only (vertical dot-dashed lines). All were consistent with the $\delta^{1/2}$ scaling with $A^+$ in the range 1.2-4.2, plotted as vertical lines in Fig.~\ref{fig:prefactors} Their corresponding minimal distances are displayed in the inset of Fig~\ref{fig:minimum-distance}.
+%
+The pre-reconnection factor $A^-$ lies within the 0.4-0.6 range, consistent with the results of the numerics, and a clear temperature effect between a superfluid component majority and normal fluid component majority.
+In the case of the Hopf link 
+%the interaction between the two rings leads to a reconnection.  
+we have performed 147 simulations 
+(49 across 3 temperatures) as shown in Fig.~\ref{fig:minimum-distance} and
+verified Eq.~(\ref{eq:scaling}) for the minimum distance $\delta^{\pm}$. 
+The prefactors $A^{\pm}$ have been computed in the shaded region 
+of the figure. In the pre-reconnection regime ($t<t_0$) we observe
+a clear segregation of the values of $A^-$ due to temperature: 
+the minimum distance grows more rapidly with time if the temperature is
+lowered. 
+In stark contrast, there is almost no memory of the temperature in the
+post-reconnection regime ($t>t_0$). 
+%\red{The lack of a temperature dependence for $A^+$ suggests
+%that the normal fluid plays only a minor role in the
+%dynamics of the post-reconnection regime.
+
+
+At $T=0~{\rm K}$, our calculations for superfluid helium 
+(black symbols in Fig.~\ref{fig:prefactors}) are in good agreement 
+with previous results obtained with the GPE \cite{villoisIrreversibleDynamicsVortex2020}
+(green diamonds), showing irreversible dynamics. In addition, the computed values of $A^-\approx 0.4$-$0.6$ at $T=0~{\rm K}$
+are consistent with analytical calculations \cite{boue-etal-2013,rica-2019}. 
+At non-zero temperatures, our results confirm the irreversibility of vortex reconnections 
+observed at $T=0$ as $A^+$ is always larger than $A^-$. Importantly, this asymmetry 
+is recovered in all our simulations, regardless of their initial condition.
+%Our results confirm the irreversibility of vortex reconnections 
+%\red{($A^+>A^-$)} at non-zero temperatures. 
+%As shown in Fig.~\ref{fig:prefactors}, \red{our} $T=0~{\rm K}$ calculation 
+%for superfluid helium is in good agreement with the GPE model for
+%a condensate at $T=0$, which yields $A^-\approx 0.4$-$0.6$ 
+%for both initial conditions \red{[ADD REF]}. 
+The same asymmetry between
+$A^+$ and $A^-$ at non-zero temperatures has been observed for reconnections in finite-temperature
+Bose-Einstein condensatates \cite{allen2014}, although in this work the system
+is not homogeneous (the condensate is confined by a harmonic trap) and the
+thermal component is a ballistc gas, not a viscous fluid.
+Note that the vortex reconnections in classical viscous fluids reported in %the classical Navier-Stokes equation
+\cite{yaoSeparationScalingViscous2020} also display
+a clear $1/2$ power-law scaling for the minimum distance
+with $A^- \approx 0.3$-$0.4$, which again shows good agreement with our
+results. The scaling law (Eq.~\ref{eq:scaling}) and the range of values of $A^-$ hence appear to have a universal character in vortex reconnections, independently of the nature
+of the fluid, classical or quantum.
+
+
+%\paragraph*{\red{Energy injection. ---}}
+
+\paragraph*{Energy injection. ---}
+The normal fluid impacts the dynamics of reconnecting superfluid vortices via the temperature dependent mutual friction coefficients. Conversely, the motion of superfluid vortices involved in the reconnection process influence, significantly, the dynamics of the normal fluid. Figure~\ref{fig:energy-evol} indeed shows that the normal fluid energy, $E_n$,
+suddenly increases at the reconnection time by an amount ($\approx 5\%$)
+which is smaller but comparable to the continuous energy increase as vortex
+lines approach each other. Indeed the
+curvature $\zeta=|\s''|$ of the vortex line 
+spikes at $t=t_0$ when
+the reconnection cusp is created, and, in the first approximation \cite{galantucci-krstulovic-etal-2023},
+the magnitude of the energy injected in the normal fluid per unit time $I$
+is proportional to the strength of the mutual friction force $\mathbf{F}_{ns}$ which scales as
+$|\mathbf{F}_{ns}(\s)|\propto|\dot{\s}-\v_n|\propto|\dot{\s}|\propto\zeta$. This sudden
+transfer of energy
+\cite{stasiakCrossComponentEnergyTransfer2024} from the superfluid
+vortex configuration to the normal fluid is the origin of the 
+small scale normal fluid enstrophy structures
+which are visible in Fig.~\ref{fig:ring-coll-viz}.
+
+
+%The prefactor ratio $A^+/A^-$ has been shown in recent literature 
+%\cite{villoisIrreversibleDynamicsVortex2020,villoisUniversalNonuniversalAspects2017a,promentMatchingTheoryCharacterize2020} 
+%to be of importance in describing fundamental properties of reconnections 
+%using the Gross-Pitaevskii (GP) equation. Due to the \emph{ad-hoc} 
+%nature of vortex reconnections in our helium model, it is not trivial 
+%to derive a linear theory in the limit $\delta^{\pm}\rightarrow0$. 
+
+
+\begin{figure}
+	\centering
+	\includegraphics*[width=0.45\textwidth]{energy-evolution.pdf}
+	\caption{Normal fluid kinetic energy $E_n$ scaled by $E_n^0$ (the 
+kinetic energy at $t=t_0$), plotted versus (dimensionless)
+$\kappa (t-t_0)$ for the Hopf link reconnections. Black diamonds represent the simulations 
+with minimum and maximum prefactor ratios $A^+/A^-$ at $T=1.9~\rm K$ and 
+$T=2.1~\rm K$ respectively.}
+	\label{fig:energy-evol}
+\end{figure}
+
+The total energy injected into the normal fluid by the reconnection,
+$\Delta E_n$, which hereafter
+we refer to as the energy jump, is defined as
+\begin{equation}
+	\Delta E_n = \max{\left[E_n(t>t_0)\right]} - E_n^0,
+\end{equation} 
+%
+where $E_n^0=E_n(t_0)$ is the normal fluid kinetic energy at $t=t_0$.
+Normalized energy jumps are plotted in
+Fig.~\ref{fig:energy-jumps} as a function of
+the ratio $A^+/A^-$. Here, we observe that the larger $A^+/A^-$ is,
+the smaller the normal fluid excitation is.
+
+The emission of the sound pulse at the vortex reconnection 
+\cite{leadbeaterSoundEmissionDue2001b} which is typical of the GPE model
+is absent in our incompressible hydrodynamic approach. To model
+this effect, the change of vortex length, $\Delta L$, created by the
+vortex reconnection algorithm is always negative by construction
+\cite{baggaleySensitivityVortexFilament2012a},
+because, in the local induction approximation to the Biot-Savart law, 
+the superfluid incompressible kinetic energy, $E_s$, is proportional to the vortex length,
+$L$. Such procedure ensures that at $T=0~{\rm K}$ when a reconnection occurs
+$\Delta E_s\propto \Delta L < 0$. %Therefore, at $T=0~{\rm K}$, in the absence of any dissipative 
+%normal fluid, $\Delta E_s\propto \Delta L$. 
+Consequentially, in the absence of any dissipative normal fluid,
+the superfluid energy 
+$E_s$ that would be transferred to the sound pulse, normalized with its value $E_s^0$ at 
+reconnection, is $-\Delta L/L_0$., 
+%should exhibit the same characteristic behavior as the normal fluid energy 
+%which is injected, $\Delta E_n/E_n^0$. 
+If these normalized energy jumps (black diamonds
+in Fig.~\ref{fig:energy-jumps}) are compared to the results obtained with the 
+compressible GPE \cite{villoisIrreversibleDynamicsVortex2020} (purple squares)
+we find a good agreement, confirming that the model we employ, 
+%despite the ad-hoc algorithm employed to take into account the reconnection events
+is suitable for the investigation of the feature of single reconnection events.
+%Indeed, the black diamonds
+%in Fig.~\ref{fig:energy-jumps} shows that our $T=0~{\rm K}$ simulations are
+%in good agreement with the GPE results (purple squares).
+
+
+
+\paragraph*{Implications for turbulence. ---}
+Our numerical results have implications for our understanding of 
+quantum turbulence \cite{BSS2023}.
+A fully developed turbulent tangle of vortices is
+characterized by its vortex line density $\mathcal{L}$ (vortex length
+per unit volume); the frequency 
+of vortex reconnections per unit volume is 
+${f=(\kappa/6\pi)\mathcal{L}^{5/2}\ln(\mathcal{L}^{-1/2}/a_0)}$
+\cite{barenghi2004}. From Fig.~\ref{fig:energy-evol} we estimate the 
+normal fluid reconnection relaxation time $\tau_n$ as the time 
+after reconnection at which the normal fluid energy $E_n/E_0$ has decayed
+to the pre-reconnection level: in our dimensionless units, $\kappa \tau_n \approx 0.25$. 
+Using this timescale, we estimate that
+the average vortex line density that is required to sustain the normal fluid 
+in a perturbed state via frequent vortex reconnections is approximately
+$\mathcal{L} \approx 10^7$ to $10^8\mathrm{m}^{-2}$. Experiments in $^4$He
+\cite{schwarz1981,milliken1982,roche2008,roche2007,Babuin2014} and in $^3$He
+\cite{bradley2006} can achieve vortex line densities much larger than this.
+
+
+\begin{figure}
+	\centering
+	\includegraphics*[width=0.48\textwidth]{energy-jump.pdf}
+	\caption{Normalized energy jumps $\Delta E_n/E_n^0$ for Hopf link 
+reconnections.The solid black diamonds are the normalized change in line length $\Delta L/L_0$ in the
+$T=0~\rm K$ case. Blue and red circle correspond to $T=1.9K$ and $T=2.1K$,respectively. The purple squares are from GPE simulations of
+Villois et al. \cite{villoisIrreversibleDynamicsVortex2020}.}
+	\label{fig:energy-jumps}
+\end{figure}
+
+\paragraph*{Conclusions.---} We have conducted an experiment using passive particle tracers and a suite of numerical simulations of vortex reconnections over a wide range of temperatures using a model of $^4$He which accounts for the coupled dynamics of superfluid and normal fluid components.
+We have verified the scaling law of the minimum vortex distance 
+$\delta^{\pm}=A^{\pm} (\kappa |t-t_0|)^{1/2}$ and found that the approach prefactor $A^-$ has a clear temperature dependence independent of the geometry in both experiments and numerics, in contrast to the
+separation prefactor $A^+$. The prefactors are in good agreement
+with GPE simulations \cite{villoisIrreversibleDynamicsVortex2020,allen2014} 
+and classical fluid reconnections \cite{yaoSeparationScalingViscous2020}
+revealing that vortex reconnections display a universal behaviour, linked to irreversible vortex energy dissipation, regardless of the nature
+of the fluid (classical or quantum) and of temperature, \textit{i.e.} regardless of the small scale energy transfer mechanism. 
+It is worth noting that the behaviour, as a function of $A^+/A^-$, of 
+the energy injected in the normal fluid (at $T>0$) and of the energy transferred to sound (at $T=0$)
+\cite{villoisIrreversibleDynamicsVortex2020,leadbeaterSoundEmissionDue2001b} is dissimilar: the former decreases as $A^+/A^-$
+increases, the latter the opposite. This likely arises from the distinct physics governing the loss of superfluid 
+incompressible kinetic energy: mutual friction at $T>0$, quantum pressure at $T=0$.
+We have also found that a reconnection event suddenly injects an amount of energy 
+into the normal fluid which is comparable to the energy transferred by friction
+during the vortex approach. Applying these results to turbulence, we have
+compared the decay time of the normal fluid structures created by a
+reconnection to the frequency of reconnections in a vortex tangle, and argued
+that, if the vortex line density is large enough, these punctuated
+energy injections should sustain the normal fluid in a perturbed state, which may lead to a new type of turbulence.
+
+\paragraph*{Acknowledgements.---} Y.M.X., Y.A., and W.G. acknowledge the support from the Gordon and Betty Moore Foundation through Grant DOI 10.37807/gbmf11567 and the US Department of Energy under Grant DE-SC0020113. The experimental work was conducted at the National High Magnetic Field Laboratory at Florida State University, which is supported by the National Science Foundation Cooperative Agreement No. DMR-2128556 and the state of Florida. G.K. acknowledges financial support from the Agence Nationale de la Recherche through the project QuantumVIW ANR-23-CE30-0024-02. P.Z.S. acknowledges the financial support of the UCA ``visiting doctoral student program'' on complex systems. Computations were carried out at the Mésocentre SIGAMM hosted at the Observatoire de la Côte d’Azur.
+
+% \bibliography{references3}% Produces the bibliography via BibTeX.
+%apsrev4-2.bst 2019-01-14 (MD) hand-edited version of apsrev4-1.bst
+%Control: key (0)
+%Control: author (8) initials jnrlst
+%Control: editor formatted (1) identically to author
+%Control: production of article title (0) allowed
+%Control: page (0) single
+%Control: year (1) truncated
+%Control: production of eprint (0) enabled
+\begin{thebibliography}{38}%
+	\makeatletter
+	\providecommand \@ifxundefined [1]{%
+	 \@ifx{#1\undefined}
+	}%
+	\providecommand \@ifnum [1]{%
+	 \ifnum #1\expandafter \@firstoftwo
+	 \else \expandafter \@secondoftwo
+	 \fi
+	}%
+	\providecommand \@ifx [1]{%
+	 \ifx #1\expandafter \@firstoftwo
+	 \else \expandafter \@secondoftwo
+	 \fi
+	}%
+	\providecommand \natexlab [1]{#1}%
+	\providecommand \enquote  [1]{``#1''}%
+	\providecommand \bibnamefont  [1]{#1}%
+	\providecommand \bibfnamefont [1]{#1}%
+	\providecommand \citenamefont [1]{#1}%
+	\providecommand \href@noop [0]{\@secondoftwo}%
+	\providecommand \href [0]{\begingroup \@sanitize@url \@href}%
+	\providecommand \@href[1]{\@@startlink{#1}\@@href}%
+	\providecommand \@@href[1]{\endgroup#1\@@endlink}%
+	\providecommand \@sanitize@url [0]{\catcode `\\12\catcode `\$12\catcode
+	  `\&12\catcode `\#12\catcode `\^12\catcode `\_12\catcode `\%12\relax}%
+	\providecommand \@@startlink[1]{}%
+	\providecommand \@@endlink[0]{}%
+	\providecommand \url  [0]{\begingroup\@sanitize@url \@url }%
+	\providecommand \@url [1]{\endgroup\@href {#1}{\urlprefix }}%
+	\providecommand \urlprefix  [0]{URL }%
+	\providecommand \Eprint [0]{\href }%
+	\providecommand \doibase [0]{https://doi.org/}%
+	\providecommand \selectlanguage [0]{\@gobble}%
+	\providecommand \bibinfo  [0]{\@secondoftwo}%
+	\providecommand \bibfield  [0]{\@secondoftwo}%
+	\providecommand \translation [1]{[#1]}%
+	\providecommand \BibitemOpen [0]{}%
+	\providecommand \bibitemStop [0]{}%
+	\providecommand \bibitemNoStop [0]{.\EOS\space}%
+	\providecommand \EOS [0]{\spacefactor3000\relax}%
+	\providecommand \BibitemShut  [1]{\csname bibitem#1\endcsname}%
+	\let\auto@bib@innerbib\@empty
+	%</preamble>
+	\bibitem [{\citenamefont {Yao}\ and\ \citenamefont
+	  {Hussain}(2022)}]{YaoHussainAnnRev2022}%
+	  \BibitemOpen
+	  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
+	  {Yao}}\ and\ \bibinfo {author} {\bibfnamefont {F.}~\bibnamefont {Hussain}},\
+	  }\bibfield  {title} {\bibinfo {title} {Vortex reconnection and turbulence
+	  cascade},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal} {Ann.
+	  Rev. Fluid Mech.}\ }\textbf {\bibinfo {volume} {54}},\ \bibinfo {pages} {317}
+	  (\bibinfo {year} {2022})}\BibitemShut {NoStop}%
+	\bibitem [{\citenamefont {Chapman}\ \emph {et~al.}(2010)\citenamefont
+	  {Chapman}, \citenamefont {Scannell}, \citenamefont {Cooper}, \citenamefont
+	  {Graves}, \citenamefont {Hastie}, \citenamefont {Naylor},\ and\ \citenamefont
+	  {Zocco}}]{Chapman2010}%
+	  \BibitemOpen
+	  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {I.~T.}\ \bibnamefont
+	  {Chapman}}, \bibinfo {author} {\bibfnamefont {R.}~\bibnamefont {Scannell}},
+	  \bibinfo {author} {\bibfnamefont {W.~A.}\ \bibnamefont {Cooper}}, \bibinfo
+	  {author} {\bibfnamefont {J.~P.}\ \bibnamefont {Graves}}, \bibinfo {author}
+	  {\bibfnamefont {R.~J.}\ \bibnamefont {Hastie}}, \bibinfo {author}
+	  {\bibfnamefont {G.}~\bibnamefont {Naylor}},\ and\ \bibinfo {author}
+	  {\bibfnamefont {A.}~\bibnamefont {Zocco}},\ }\bibfield  {title} {\bibinfo
+	  {title} {Magnetic reconnection triggering magnetohydrodynamic instabilities
+	  during a sawtooth crash in a tokamak plasma},\ }\href@noop {} {\bibfield
+	  {journal} {\bibinfo  {journal} {Phys. Rev. Lett.}\ }\textbf {\bibinfo
+	  {volume} {105}},\ \bibinfo {pages} {255002} (\bibinfo {year}
+	  {2010})}\BibitemShut {NoStop}%
+	\bibitem [{\citenamefont {Nazarenko}\ and\ \citenamefont
+	  {West}(2003)}]{nazarenko2003}%
+	  \BibitemOpen
+	  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {S.}~\bibnamefont
+	  {Nazarenko}}\ and\ \bibinfo {author} {\bibfnamefont {R.}~\bibnamefont
+	  {West}},\ }\bibfield  {title} {\bibinfo {title} {Analytical solution for
+	  nonlinear {Schr{\"o}dinger} vortex reconnection},\ }\href@noop {} {\bibfield
+	  {journal} {\bibinfo  {journal} {J. Low Temp. Phys.}\ }\textbf {\bibinfo
+	  {volume} {132}},\ \bibinfo {pages} {1} (\bibinfo {year} {2003})}\BibitemShut
+	  {NoStop}%
+	\bibitem [{\citenamefont {Bewley}\ \emph {et~al.}(2008)\citenamefont {Bewley},
+	  \citenamefont {Paoletti}, \citenamefont {Sreenivasan},\ and\ \citenamefont
+	  {Lathrop}}]{bewley2008}%
+	  \BibitemOpen
+	  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {G.~P.}\ \bibnamefont
+	  {Bewley}}, \bibinfo {author} {\bibfnamefont {M.~S.}\ \bibnamefont
+	  {Paoletti}}, \bibinfo {author} {\bibfnamefont {K.~R.}\ \bibnamefont
+	  {Sreenivasan}},\ and\ \bibinfo {author} {\bibfnamefont {D.~P.}\ \bibnamefont
+	  {Lathrop}},\ }\bibfield  {title} {\bibinfo {title} {Characterization of
+	  reconnecting vortices in superfluid helium},\ }\href@noop {} {\bibfield
+	  {journal} {\bibinfo  {journal} {Proc. Nat. Acad. Sci. USA}\ }\textbf
+	  {\bibinfo {volume} {105}},\ \bibinfo {pages} {13707} (\bibinfo {year}
+	  {2008})}\BibitemShut {NoStop}%
+	\bibitem [{\citenamefont {Paoletti}\ \emph {et~al.}(2010)\citenamefont
+	  {Paoletti}, \citenamefont {Fisher},\ and\ \citenamefont
+	  {Lathrop}}]{paoletti2010}%
+	  \BibitemOpen
+	  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.~S.}\ \bibnamefont
+	  {Paoletti}}, \bibinfo {author} {\bibfnamefont {M.~E.}\ \bibnamefont
+	  {Fisher}},\ and\ \bibinfo {author} {\bibfnamefont {D.~P.}\ \bibnamefont
+	  {Lathrop}},\ }\bibfield  {title} {\bibinfo {title} {Reconnection dynamics for
+	  quantized vortices},\ }\href@noop {} {\bibfield  {journal} {\bibinfo
+	  {journal} {Physica D}\ }\textbf {\bibinfo {volume} {239}},\ \bibinfo {pages}
+	  {1367} (\bibinfo {year} {2010})}\BibitemShut {NoStop}%
+	\bibitem [{\citenamefont {Zuccher}\ \emph {et~al.}(2012)\citenamefont
+	  {Zuccher}, \citenamefont {Caliari}, \citenamefont {Baggaley},\ and\
+	  \citenamefont {Barenghi}}]{zuccherQuantumVortexReconnections2012a}%
+	  \BibitemOpen
+	  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {S.}~\bibnamefont
+	  {Zuccher}}, \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Caliari}},
+	  \bibinfo {author} {\bibfnamefont {A.~W.}\ \bibnamefont {Baggaley}},\ and\
+	  \bibinfo {author} {\bibfnamefont {C.~F.}\ \bibnamefont {Barenghi}},\
+	  }\bibfield  {title} {\bibinfo {title} {Quantum vortex reconnections},\
+	  }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal} {Phys. Fluids}\
+	  }\textbf {\bibinfo {volume} {24}},\ \bibinfo {pages} {125108} (\bibinfo
+	  {year} {2012})}\BibitemShut {NoStop}%
+	\bibitem [{\citenamefont {Villois}\ \emph {et~al.}(2017)\citenamefont
+	  {Villois}, \citenamefont {Proment},\ and\ \citenamefont
+	  {Krstulovic}}]{villoisUniversalNonuniversalAspects2017a}%
+	  \BibitemOpen
+	  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+	  {Villois}}, \bibinfo {author} {\bibfnamefont {D.}~\bibnamefont {Proment}},\
+	  and\ \bibinfo {author} {\bibfnamefont {G.}~\bibnamefont {Krstulovic}},\
+	  }\bibfield  {title} {\bibinfo {title} {Universal and nonuniversal aspects of
+	  vortex reconnections in superfluids},\ }\href@noop {} {\bibfield  {journal}
+	  {\bibinfo  {journal} {Phys. Rev. Fluids}\ }\textbf {\bibinfo {volume} {2}},\
+	  \bibinfo {pages} {044701} (\bibinfo {year} {2017})}\BibitemShut {NoStop}%
+	\bibitem [{\citenamefont {Galantucci}\ \emph {et~al.}(2019)\citenamefont
+	  {Galantucci}, \citenamefont {Baggaley}, \citenamefont {Parker},\ and\
+	  \citenamefont {Barenghi}}]{galantucciCrossoverInteractionDriven2019a}%
+	  \BibitemOpen
+	  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {L.}~\bibnamefont
+	  {Galantucci}}, \bibinfo {author} {\bibfnamefont {A.~W.}\ \bibnamefont
+	  {Baggaley}}, \bibinfo {author} {\bibfnamefont {N.~G.}\ \bibnamefont
+	  {Parker}},\ and\ \bibinfo {author} {\bibfnamefont {C.~F.}\ \bibnamefont
+	  {Barenghi}},\ }\bibfield  {title} {\bibinfo {title} {Crossover from
+	  interaction to driven regimes in quantum vortex reconnections},\ }\href@noop
+	  {} {\bibfield  {journal} {\bibinfo  {journal} {Proc. Nat. Acad. Sci. USA}\
+	  }\textbf {\bibinfo {volume} {116}},\ \bibinfo {pages} {12204} (\bibinfo
+	  {year} {2019})}\BibitemShut {NoStop}%
+	\bibitem [{\citenamefont {Tylutki}\ and\ \citenamefont
+	  {Wlaz{\l}owski}(2021)}]{tylutki2021universal}%
+	  \BibitemOpen
+	  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
+	  {Tylutki}}\ and\ \bibinfo {author} {\bibfnamefont {G.}~\bibnamefont
+	  {Wlaz{\l}owski}},\ }\bibfield  {title} {\bibinfo {title} {Universal aspects
+	  of vortex reconnections across the bcs-bec crossover},\ }\href@noop {}
+	  {\bibfield  {journal} {\bibinfo  {journal} {Physical Review A}\ }\textbf
+	  {\bibinfo {volume} {103}},\ \bibinfo {pages} {L051302} (\bibinfo {year}
+	  {2021})}\BibitemShut {NoStop}%
+	\bibitem [{\citenamefont {Yao}\ and\ \citenamefont
+	  {Hussain}(2020)}]{yaoSeparationScalingViscous2020}%
+	  \BibitemOpen
+	  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
+	  {Yao}}\ and\ \bibinfo {author} {\bibfnamefont {F.}~\bibnamefont {Hussain}},\
+	  }\bibfield  {title} {\bibinfo {title} {Separation scaling for viscous vortex
+	  reconnection},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal} {J.
+	  Fluid Mech.}\ }\textbf {\bibinfo {volume} {900}},\ \bibinfo {pages} {R4}
+	  (\bibinfo {year} {2020})}\BibitemShut {NoStop}%
+	\bibitem [{\citenamefont {Villois}\ \emph {et~al.}(2020)\citenamefont
+	  {Villois}, \citenamefont {Proment},\ and\ \citenamefont
+	  {Krstulovic}}]{villoisIrreversibleDynamicsVortex2020}%
+	  \BibitemOpen
+	  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+	  {Villois}}, \bibinfo {author} {\bibfnamefont {D.}~\bibnamefont {Proment}},\
+	  and\ \bibinfo {author} {\bibfnamefont {G.}~\bibnamefont {Krstulovic}},\
+	  }\bibfield  {title} {\bibinfo {title} {Irreversible dynamics of vortex
+	  reconnections in quantum fluids},\ }\href@noop {} {\bibfield  {journal}
+	  {\bibinfo  {journal} {Phys. Rev. Lett.}\ }\textbf {\bibinfo {volume} {125}},\
+	  \bibinfo {pages} {164501} (\bibinfo {year} {2020})}\BibitemShut {NoStop}%
+	\bibitem [{\citenamefont {Proment}\ and\ \citenamefont
+	  {Krstulovic}(2020)}]{promentMatchingTheoryCharacterize2020}%
+	  \BibitemOpen
+	  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {D.}~\bibnamefont
+	  {Proment}}\ and\ \bibinfo {author} {\bibfnamefont {G.}~\bibnamefont
+	  {Krstulovic}},\ }\bibfield  {title} {\bibinfo {title} {Matching theory to
+	  characterize sound smission during vortex reconnection in quantum fluids},\
+	  }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal} {Phys. Rev.
+	  Fluids}\ }\textbf {\bibinfo {volume} {5}},\ \bibinfo {pages} {104701}
+	  (\bibinfo {year} {2020})}\BibitemShut {NoStop}%
+	\bibitem [{\citenamefont {Leadbeater}\ \emph {et~al.}(2001)\citenamefont
+	  {Leadbeater}, \citenamefont {Winiecki}, \citenamefont {Samuels},
+	  \citenamefont {Barenghi},\ and\ \citenamefont
+	  {Adams}}]{leadbeaterSoundEmissionDue2001b}%
+	  \BibitemOpen
+	  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
+	  {Leadbeater}}, \bibinfo {author} {\bibfnamefont {T.}~\bibnamefont
+	  {Winiecki}}, \bibinfo {author} {\bibfnamefont {D.~C.}\ \bibnamefont
+	  {Samuels}}, \bibinfo {author} {\bibfnamefont {C.~F.}\ \bibnamefont
+	  {Barenghi}},\ and\ \bibinfo {author} {\bibfnamefont {C.~S.}\ \bibnamefont
+	  {Adams}},\ }\bibfield  {title} {\bibinfo {title} {Sound emission due to
+	  superfluid vortex reconnections},\ }\href@noop {} {\bibfield  {journal}
+	  {\bibinfo  {journal} {Phys. Rev. Lett.}\ }\textbf {\bibinfo {volume} {86}},\
+	  \bibinfo {pages} {1410} (\bibinfo {year} {2001})}\BibitemShut {NoStop}%
+	\bibitem [{\citenamefont {Paoletti}\ \emph {et~al.}(2008)\citenamefont
+	  {Paoletti}, \citenamefont {Fisher}, \citenamefont {Sreenivasan},\ and\
+	  \citenamefont {Lathrop}}]{paoletti2008velocity}%
+	  \BibitemOpen
+	  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.~S.}\ \bibnamefont
+	  {Paoletti}}, \bibinfo {author} {\bibfnamefont {M.~E.}\ \bibnamefont
+	  {Fisher}}, \bibinfo {author} {\bibfnamefont {K.~R.}\ \bibnamefont
+	  {Sreenivasan}},\ and\ \bibinfo {author} {\bibfnamefont {D.~P.}\ \bibnamefont
+	  {Lathrop}},\ }\bibfield  {title} {\bibinfo {title} {Velocity statistics
+	  distinguish quantum turbulence from classical turbulence},\ }\href@noop {}
+	  {\bibfield  {journal} {\bibinfo  {journal} {Phys. Rev. Lett.}\
+	  }\textbf {\bibinfo {volume} {101}},\ \bibinfo {pages} {154501} (\bibinfo
+	  {year} {2008})}\BibitemShut {NoStop}%
+	\bibitem [{\citenamefont {Guo}\ \emph {et~al.}(2014)\citenamefont {Guo},
+	  \citenamefont {La~Mantia}, \citenamefont {Lathrop},\ and\ \citenamefont
+	  {Van~Sciver}}]{guo2014visualization}%
+	  \BibitemOpen
+	  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {W.}~\bibnamefont
+	  {Guo}}, \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {La~Mantia}},
+	  \bibinfo {author} {\bibfnamefont {D.~P.}\ \bibnamefont {Lathrop}},\ and\
+	  \bibinfo {author} {\bibfnamefont {S.~W.}\ \bibnamefont {Van~Sciver}},\
+	  }\bibfield  {title} {\bibinfo {title} {Visualization of two-fluid flows of
+	  superfluid helium-4},\ }\href@noop {} {\bibfield  {journal} {\bibinfo
+	  {journal} {Proc. Nat. Acad. Sci.}\ }\textbf
+	  {\bibinfo {volume} {111}},\ \bibinfo {pages} {4653} (\bibinfo {year}
+	  {2014})}\BibitemShut {NoStop}%
+	\bibitem [{\citenamefont {Peretti}\ \emph {et~al.}(2023)\citenamefont
+	  {Peretti}, \citenamefont {Vessaire}, \citenamefont {Émeric Durozoy},\ and\
+	  \citenamefont {Gibert}}]{perettiDirectVisualizationQuantum2023}%
+	  \BibitemOpen
+	  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.}~\bibnamefont
+	  {Peretti}}, \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Vessaire}},
+	  \bibinfo {author} {\bibnamefont {Émeric Durozoy}},\ and\ \bibinfo {author}
+	  {\bibfnamefont {M.}~\bibnamefont {Gibert}},\ }\bibfield  {title} {\bibinfo
+	  {title} {Direct visualization of the quantum vortex lattice structure,
+	  oscillations, and destabilization in rotating $^4$He},\ }\href
+	  {https://doi.org/10.1126/sciadv.adh2899} {\bibfield  {journal} {\bibinfo
+	  {journal} {Sci. Adv.}\ }\textbf {\bibinfo {volume} {9}},\ \bibinfo
+	  {pages} {eadh2899} (\bibinfo {year} {2023})}, \BibitemShut
+	  {NoStop}%
+	\bibitem [{\citenamefont {Xu}\ and\ \citenamefont
+	  {Van~Sciver}(2008)}]{xu2008density}%
+	  \BibitemOpen
+	  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {T.}~\bibnamefont
+	  {Xu}}\ and\ \bibinfo {author} {\bibfnamefont {S.~W.}\ \bibnamefont
+	  {Van~Sciver}},\ }\bibfield  {title} {\bibinfo {title} {{Density effect of
+	  solidified hydrogen isotope particles on particle image velocimetry
+	  measurements of He II flow}},\ }\href {https://doi.org/10.1063/1.2908547}
+	  {\bibfield  {journal} {\bibinfo  {journal} {AIP Conf. Proc.}\ }\textbf
+	  {\bibinfo {volume} {985}},\ \bibinfo {pages} {191} (\bibinfo {year}
+	  {2008})}\BibitemShut {NoStop}%
+	\bibitem [{\citenamefont {Tang}\ \emph {et~al.}(2023)\citenamefont {Tang},
+	  \citenamefont {Guo}, \citenamefont {Kobayashi}, \citenamefont {Yui},
+	  \citenamefont {Tsubota},\ and\ \citenamefont
+	  {Kanai}}]{tang2023visualization}%
+	  \BibitemOpen
+	  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Y.}~\bibnamefont
+	  {Tang}}, \bibinfo {author} {\bibfnamefont {W.}~\bibnamefont {Guo}}, \bibinfo
+	  {author} {\bibfnamefont {H.}~\bibnamefont {Kobayashi}}, \bibinfo {author}
+	  {\bibfnamefont {S.}~\bibnamefont {Yui}}, \bibinfo {author} {\bibfnamefont
+	  {M.}~\bibnamefont {Tsubota}},\ and\ \bibinfo {author} {\bibfnamefont
+	  {T.}~\bibnamefont {Kanai}},\ }\bibfield  {title} {\bibinfo {title} {Imaging
+	  quantized vortex rings in superfluid helium to evaluate quantum
+	  dissipation},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal}
+	  {Nat. Commun.}\ }\textbf {\bibinfo {volume} {14}},\ \bibinfo {pages} {2941}
+	  (\bibinfo {year} {2023})}\BibitemShut {NoStop}%
+	\bibitem [{\citenamefont {Tang}\ \emph {et~al.}(2021)\citenamefont {Tang},
+	  \citenamefont {Bao},\ and\ \citenamefont {Guo}}]{tang2021visualization}%
+	  \BibitemOpen
+	  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Y.}~\bibnamefont
+	  {Tang}}, \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Bao}},\ and\
+	  \bibinfo {author} {\bibfnamefont {W.}~\bibnamefont {Guo}},\ }\bibfield
+	  {title} {\bibinfo {title} {Superdiffusion of quantized vortices uncovering
+	  scaling laws in quantum turbulence},\ }\href
+	  {https://doi.org/10.1073/pnas.2021957118} {\bibfield  {journal} {\bibinfo
+	  {journal} {Proc. Natl. Acad. Sci. U.S.A.}\ }\textbf {\bibinfo {volume}
+	  {118}},\ \bibinfo {pages} {e2021957118} (\bibinfo {year} {2021})}\BibitemShut
+	  {NoStop}%
+	\bibitem [{\citenamefont {Fonda}\ \emph {et~al.}(2016)\citenamefont {Fonda},
+	  \citenamefont {Sreenivasan},\ and\ \citenamefont
+	  {Lathrop}}]{fonda2016injection}%
+	  \BibitemOpen
+	  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {E.}~\bibnamefont
+	  {Fonda}}, \bibinfo {author} {\bibfnamefont {K.~R.}\ \bibnamefont
+	  {Sreenivasan}},\ and\ \bibinfo {author} {\bibfnamefont {D.~P.}\ \bibnamefont
+	  {Lathrop}},\ }\bibfield  {title} {\bibinfo {title} {{Sub-micron solid air
+	  tracers for quantum vortices and liquid helium flows}},\ }\href
+	  {https://doi.org/10.1063/1.4941337} {\bibfield  {journal} {\bibinfo
+	  {journal} {Rev. Sci. Instrum.}\ }\textbf {\bibinfo {volume} {87}},\ \bibinfo
+	  {pages} {025106} (\bibinfo {year} {2016})}\BibitemShut {NoStop}%
+	\bibitem [{\citenamefont {Giuriato}\ and\ \citenamefont
+	  {Krstulovic}(2020)}]{GiuriatoQuantumVortexReconnections2020}%
+	  \BibitemOpen
+	  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {U.}~\bibnamefont
+	  {Giuriato}}\ and\ \bibinfo {author} {\bibfnamefont {G.}~\bibnamefont
+	  {Krstulovic}},\ }\bibfield  {title} {\bibinfo {title} {Quantum vortex
+	  reconnections mediated by trapped particles},\ }\href
+	  {https://doi.org/10.1103/PhysRevB.102.094508} {\bibfield  {journal} {\bibinfo
+	   {journal} {Phys. Rev. B}\ }\textbf {\bibinfo {volume} {102}},\ \bibinfo
+	  {pages} {094508} (\bibinfo {year} {2020})}\BibitemShut {NoStop}%
+	\bibitem [{\citenamefont {Schwarz}(1988)}]{schwarz1988}%
+	  \BibitemOpen
+	  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {{\relax
+	  KW}.}~\bibnamefont {Schwarz}},\ }\bibfield  {title} {\bibinfo {title}
+	  {Three-dimensional vortex dynamics in superfluid {$^{4}$}{{He}}},\
+	  }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal} {Phys. Rev. B}\
+	  }\textbf {\bibinfo {volume} {38}},\ \bibinfo {pages} {2398} (\bibinfo {year}
+	  {1988})}\BibitemShut {NoStop}%
+	\bibitem [{\citenamefont {Galantucci}\ \emph {et~al.}(2020)\citenamefont
+	  {Galantucci}, \citenamefont {Baggaley}, \citenamefont {Barenghi},\ and\
+	  \citenamefont {Krstulovic}}]{galantucciNewSelfconsistentApproach2020b}%
+	  \BibitemOpen
+	  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {L.}~\bibnamefont
+	  {Galantucci}}, \bibinfo {author} {\bibfnamefont {A.~W.}\ \bibnamefont
+	  {Baggaley}}, \bibinfo {author} {\bibfnamefont {C.~F.}\ \bibnamefont
+	  {Barenghi}},\ and\ \bibinfo {author} {\bibfnamefont {G.}~\bibnamefont
+	  {Krstulovic}},\ }\bibfield  {title} {\bibinfo {title} {A new self-consistent
+	  approach of quantum turbulence in superfluid helium},\ }\href@noop {}
+	  {\bibfield  {journal} {\bibinfo  {journal} {Eur. Phys. J. Plus}\ }\textbf
+	  {\bibinfo {volume} {135}},\ \bibinfo {pages} {547} (\bibinfo {year}
+	  {2020})}\BibitemShut {NoStop}%
+	\bibitem [{\citenamefont
+	  {Baggaley}(2012)}]{baggaleySensitivityVortexFilament2012a}%
+	  \BibitemOpen
+	  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.~W.}\ \bibnamefont
+	  {Baggaley}},\ }\bibfield  {title} {\bibinfo {title} {The sensitivity of the
+	  vortex filament method to different reconnection models},\ }\href@noop {}
+	  {\bibfield  {journal} {\bibinfo  {journal} {J. Low Temp. Phys.}\ }\textbf
+	  {\bibinfo {volume} {168}},\ \bibinfo {pages} {18} (\bibinfo {year}
+	  {2012})}\BibitemShut {NoStop}%
+	\bibitem [{\citenamefont {Kivotides}\ \emph {et~al.}(2000)\citenamefont
+	  {Kivotides}, \citenamefont {Barenghi},\ and\ \citenamefont
+	  {Samuels}}]{kivotides-barenghi-samuels-2000}%
+	  \BibitemOpen
+	  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {D.}~\bibnamefont
+	  {Kivotides}}, \bibinfo {author} {\bibfnamefont {C.~F.}\ \bibnamefont
+	  {Barenghi}},\ and\ \bibinfo {author} {\bibfnamefont {D.~C.}\ \bibnamefont
+	  {Samuels}},\ }\bibfield  {title} {\bibinfo {title} {Triple vortex ring
+	  structure in superfluid helium II},\ }\href@noop {} {\bibfield  {journal}
+	  {\bibinfo  {journal} {Science}\ }\textbf {\bibinfo {volume} {290}},\ \bibinfo
+	  {pages} {777} (\bibinfo {year} {2000})}\BibitemShut {NoStop}%
+	\bibitem [{\citenamefont {Bou\'{e}}\ \emph {et~al.}(2013)\citenamefont
+	  {Bou\'{e}}, \citenamefont {Khomenko}, \citenamefont {L'vov},\ and\
+	  \citenamefont {Procaccia}}]{boue-etal-2013}%
+	  \BibitemOpen
+	  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {L.}~\bibnamefont
+	  {Bou\'{e}}}, \bibinfo {author} {\bibfnamefont {D.}~\bibnamefont {Khomenko}},
+	  \bibinfo {author} {\bibfnamefont {V.}~\bibnamefont {L'vov}},\ and\ \bibinfo
+	  {author} {\bibfnamefont {I.}~\bibnamefont {Procaccia}},\ }\bibfield  {title}
+	  {\bibinfo {title} {Analytic solution of the approach of quantum vortices
+	  towards reconnection},\ }\href@noop {} {\bibfield  {journal} {\bibinfo
+	  {journal} {Phys. Rev. Lett.}\ }\textbf {\bibinfo {volume} {111}},\ \bibinfo
+	  {pages} {145302} (\bibinfo {year} {2013})}\BibitemShut {NoStop}%
+	\bibitem [{\citenamefont {S}(2019)}]{rica-2019}%
+	  \BibitemOpen
+	  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.}~\bibnamefont
+	  {S}},\ }\bibfield  {title} {\bibinfo {title} {Self-similar vortex
+	  reconnection},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal} {C.
+	  R. M\'{e}c}\ }\textbf {\bibinfo {volume} {347}},\ \bibinfo {pages} {365}
+	  (\bibinfo {year} {2019})}\BibitemShut {NoStop}%
+	\bibitem [{\citenamefont {Allen}\ \emph {et~al.}(2014)\citenamefont {Allen},
+	  \citenamefont {Zuccher}, \citenamefont {Caliari}, \citenamefont {Proukakis},
+	  \citenamefont {Parker},\ and\ \citenamefont {Barenghi}}]{allen2014}%
+	  \BibitemOpen
+	  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.~J.}\ \bibnamefont
+	  {Allen}}, \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Zuccher}},
+	  \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Caliari}}, \bibinfo
+	  {author} {\bibfnamefont {N.~P.}\ \bibnamefont {Proukakis}}, \bibinfo {author}
+	  {\bibfnamefont {N.~G.}\ \bibnamefont {Parker}},\ and\ \bibinfo {author}
+	  {\bibfnamefont {C.~F.}\ \bibnamefont {Barenghi}},\ }\bibfield  {title}
+	  {\bibinfo {title} {Vortex reconnections in atomic condensates at finite
+	  temperature},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal}
+	  {Phys. Rev. A}\ }\textbf {\bibinfo {volume} {90}},\ \bibinfo {pages} {013601}
+	  (\bibinfo {year} {2014})}\BibitemShut {NoStop}%
+	\bibitem [{\citenamefont {Galantucci}\ \emph {et~al.}(2023)\citenamefont
+	  {Galantucci}, \citenamefont {Krstulovic},\ and\ \citenamefont
+	  {Barenghi}}]{galantucci-krstulovic-etal-2023}%
+	  \BibitemOpen
+	  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {L.}~\bibnamefont
+	  {Galantucci}}, \bibinfo {author} {\bibfnamefont {G.}~\bibnamefont
+	  {Krstulovic}},\ and\ \bibinfo {author} {\bibfnamefont {C.}~\bibnamefont
+	  {Barenghi}},\ }\bibfield  {title} {\bibinfo {title} {Friction-enhanced
+	  lifetime of bundled quantum vortices},\ }\href@noop {} {\bibfield  {journal}
+	  {\bibinfo  {journal} {Phys. Rev. Fluids}\ }\textbf {\bibinfo {volume} {8}},\
+	  \bibinfo {pages} {014702} (\bibinfo {year} {2023})}\BibitemShut {NoStop}%
+	\bibitem [{\citenamefont {Stasiak}\ \emph {et~al.}(2024)\citenamefont
+	  {Stasiak}, \citenamefont {Baggaley}, \citenamefont {Krstulovic},
+	  \citenamefont {Barenghi},\ and\ \citenamefont
+	  {Galantucci}}]{stasiakCrossComponentEnergyTransfer2024}%
+	  \BibitemOpen
+	  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {P.~Z.}\ \bibnamefont
+	  {Stasiak}}, \bibinfo {author} {\bibfnamefont {A.~W.}\ \bibnamefont
+	  {Baggaley}}, \bibinfo {author} {\bibfnamefont {G.}~\bibnamefont
+	  {Krstulovic}}, \bibinfo {author} {\bibfnamefont {C.~F.}\ \bibnamefont
+	  {Barenghi}},\ and\ \bibinfo {author} {\bibfnamefont {L.}~\bibnamefont
+	  {Galantucci}},\ }\bibfield  {title} {\bibinfo {title} {Cross-component energy
+	  transfer in superfluid helium-4},\ }\href@noop {} {\bibfield  {journal}
+	  {\bibinfo  {journal} {J. Low Temp. Phys.}\ } (\bibinfo {year}
+	  {2024})}\BibitemShut {NoStop}%
+	\bibitem [{\citenamefont {Barenghi}\ \emph {et~al.}(2023)\citenamefont
+	  {Barenghi}, \citenamefont {Skrbek},\ and\ \citenamefont
+	  {Sreenivasan}}]{BSS2023}%
+	  \BibitemOpen
+	  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.~F.}\ \bibnamefont
+	  {Barenghi}}, \bibinfo {author} {\bibfnamefont {L.}~\bibnamefont {Skrbek}},\
+	  and\ \bibinfo {author} {\bibfnamefont {K.~R.}\ \bibnamefont {Sreenivasan}},\
+	  }\href@noop {} {\emph {\bibinfo {title} {Quantum {{T}}urbulence}}}\ (\bibinfo
+	   {publisher} {Cambridge University Press},\ \bibinfo {year}
+	  {2023})\BibitemShut {NoStop}%
+	\bibitem [{\citenamefont {Barenghi}\ and\ \citenamefont
+	  {Samuels}(2004)}]{barenghi2004}%
+	  \BibitemOpen
+	  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.~F.}\ \bibnamefont
+	  {Barenghi}}\ and\ \bibinfo {author} {\bibfnamefont {D.~C.}\ \bibnamefont
+	  {Samuels}},\ }\bibfield  {title} {\bibinfo {title} {Scaling laws of vortex
+	  reconnections},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal}
+	  {J. Low Temp. Phys.}\ }\textbf {\bibinfo {volume} {136}},\ \bibinfo {pages}
+	  {281} (\bibinfo {year} {2004})}\BibitemShut {NoStop}%
+	\bibitem [{\citenamefont {Schwarz}\ and\ \citenamefont
+	  {Smith}(1981)}]{schwarz1981}%
+	  \BibitemOpen
+	  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {K.~W.}\ \bibnamefont
+	  {Schwarz}}\ and\ \bibinfo {author} {\bibfnamefont {C.~W.}\ \bibnamefont
+	  {Smith}},\ }\bibfield  {title} {\bibinfo {title} {Pulsed-ion study of
+	  ultrasonically generated turbulence in superfluid {{4He}}},\ }\href@noop {}
+	  {\bibfield  {journal} {\bibinfo  {journal} {Phys. Lett. A}\ }\textbf
+	  {\bibinfo {volume} {82}},\ \bibinfo {pages} {251} (\bibinfo {year}
+	  {1981})}\BibitemShut {NoStop}%
+	\bibitem [{\citenamefont {Milliken}\ \emph {et~al.}(1982)\citenamefont
+	  {Milliken}, \citenamefont {Schwarz},\ and\ \citenamefont
+	  {Smith}}]{milliken1982}%
+	  \BibitemOpen
+	  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {F.~P.}\ \bibnamefont
+	  {Milliken}}, \bibinfo {author} {\bibfnamefont {K.~W.}\ \bibnamefont
+	  {Schwarz}},\ and\ \bibinfo {author} {\bibfnamefont {C.~W.}\ \bibnamefont
+	  {Smith}},\ }\bibfield  {title} {\bibinfo {title} {Free {{Decay}} of
+	  {{Superfluid Turbulence}}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo
+	  {journal} {Phys. Rev. Lett.}\ }\textbf {\bibinfo {volume} {48}},\ \bibinfo
+	  {pages} {1204} (\bibinfo {year} {1982})}\BibitemShut {NoStop}%
+	\bibitem [{\citenamefont {Roche}\ and\ \citenamefont
+	  {Barenghi}(2008)}]{roche2008}%
+	  \BibitemOpen
+	  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {P.-E.}\ \bibnamefont
+	  {Roche}}\ and\ \bibinfo {author} {\bibfnamefont {C.~F.}\ \bibnamefont
+	  {Barenghi}},\ }\bibfield  {title} {\bibinfo {title} {Vortex spectrum in
+	  superfluid turbulence: {{Interpretation}} of a recent experiment},\
+	  }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal} {Europhys. Lett.}\ }\textbf
+	  {\bibinfo {volume} {81}},\ \bibinfo {pages} {36002} (\bibinfo {year}
+	  {2008})}\BibitemShut {NoStop}%
+	\bibitem [{\citenamefont {Roche}\ \emph {et~al.}(2007)\citenamefont {Roche},
+	  \citenamefont {Diribarne}, \citenamefont {Didelot}, \citenamefont {Fran{\c
+	  c}ais}, \citenamefont {Rousseau},\ and\ \citenamefont
+	  {Willaime}}]{roche2007}%
+	  \BibitemOpen
+	  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {P.-E.}\ \bibnamefont
+	  {Roche}}, \bibinfo {author} {\bibfnamefont {P.}~\bibnamefont {Diribarne}},
+	  \bibinfo {author} {\bibfnamefont {T.}~\bibnamefont {Didelot}}, \bibinfo
+	  {author} {\bibfnamefont {O.}~\bibnamefont {Fran{\c c}ais}}, \bibinfo {author}
+	  {\bibfnamefont {L.}~\bibnamefont {Rousseau}},\ and\ \bibinfo {author}
+	  {\bibfnamefont {H.}~\bibnamefont {Willaime}},\ }\bibfield  {title} {\bibinfo
+	  {title} {Vortex density spectrum of quantum turbulence},\ }\href@noop {}
+	  {\bibfield  {journal} {\bibinfo  {journal} {EPL}\ }\textbf {\bibinfo {volume}
+	  {77}},\ \bibinfo {pages} {66002} (\bibinfo {year} {2007})}\BibitemShut
+	  {NoStop}%
+	\bibitem [{\citenamefont {Babuin}\ \emph {et~al.}(2014)\citenamefont {Babuin},
+	  \citenamefont {Varga}, \citenamefont {Skrbek}, \citenamefont {L\'ev\^eque},\
+	  and\ \citenamefont {Roche}}]{Babuin2014}%
+	  \BibitemOpen
+	  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {S.}~\bibnamefont
+	  {Babuin}}, \bibinfo {author} {\bibfnamefont {E.}~\bibnamefont {Varga}},
+	  \bibinfo {author} {\bibfnamefont {L.}~\bibnamefont {Skrbek}}, \bibinfo
+	  {author} {\bibfnamefont {E.}~\bibnamefont {L\'ev\^eque}},\ and\ \bibinfo
+	  {author} {\bibfnamefont {P.-E.}\ \bibnamefont {Roche}},\ }\bibfield  {title}
+	  {\bibinfo {title} {Effective viscosity in quantum turbulence: a steady state
+	  approach},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal}
+	  {Europhys. Lett.}\ }\textbf {\bibinfo {volume} {106}},\ \bibinfo {pages}
+	  {24006} (\bibinfo {year} {2014})}\BibitemShut {NoStop}%
+	\bibitem [{\citenamefont {Bradley}\ \emph {et~al.}(2006)\citenamefont
+	  {Bradley}, \citenamefont {Clubb}, \citenamefont {Fisher}, \citenamefont
+	  {Gu{\'e}nault}, \citenamefont {Haley}, \citenamefont {Matthews},
+	  \citenamefont {Pickett}, \citenamefont {Tsepelin},\ and\ \citenamefont
+	  {Zaki}}]{bradley2006}%
+	  \BibitemOpen
+	  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {D.~I.}\ \bibnamefont
+	  {Bradley}}, \bibinfo {author} {\bibfnamefont {D.~O.}\ \bibnamefont {Clubb}},
+	  \bibinfo {author} {\bibfnamefont {S.~N.}\ \bibnamefont {Fisher}}, \bibinfo
+	  {author} {\bibfnamefont {A.~M.}\ \bibnamefont {Gu{\'e}nault}}, \bibinfo
+	  {author} {\bibfnamefont {R.~P.}\ \bibnamefont {Haley}}, \bibinfo {author}
+	  {\bibfnamefont {C.~J.}\ \bibnamefont {Matthews}}, \bibinfo {author}
+	  {\bibfnamefont {G.~R.}\ \bibnamefont {Pickett}}, \bibinfo {author}
+	  {\bibfnamefont {V.}~\bibnamefont {Tsepelin}},\ and\ \bibinfo {author}
+	  {\bibfnamefont {K.}~\bibnamefont {Zaki}},\ }\bibfield  {title} {\bibinfo
+	  {title} {Decay of pure quantum turbulence in superfluid $^3${{H}}e-{{B}}},\
+	  }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal} {Phys. Rev. Lett.}\
+	  }\textbf {\bibinfo {volume} {96}},\ \bibinfo {pages} {035301} (\bibinfo
+	  {year} {2006})}\BibitemShut {NoStop}%
+	\end{thebibliography}%
+
+\end{document}
+%
+% ****** End of file apssamp.tex ******
