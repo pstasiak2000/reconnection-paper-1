@@ -1,0 +1,108 @@
+\documentclass[9pt,twoside]{pnas-new}
+% Use the lineno option to display guide line numbers if required.
+
+\templatetype{pnassupportinginfo}
+
+\title{Experimental and theoretical evidence of universality in superfluid vortex reconnections}
+\author{P. Z. Stasiak, Y. Xing, Y. Alihosseini, C. F. Barenghi, A. Baggaley, W. Guo, L. Galantucci and G. Krstulovic}
+\correspondingauthor{Piotr Z. Stasiak \\E-mail: p.stasiak@newcastle.ac.uk}
+
+\usepackage{graphicx}% Include figure files
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}% bold math
+\usepackage{blindtext}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{cleveref}
+\usepackage{subcaption}
+\usepackage{xcolor}
+
+\newcommand{\bom}{\boldsymbol{\omega}}
+\newcommand{\hel}{\textsuperscript{4}He }
+
+\def\red#1{\textcolor{red}{#1}}
+\def\blue#1{\textcolor{blue}{#1}}
+\def\magenta#1{\textcolor{magenta}{#1}}
+\newcommand*{\NOTE}[1]{\textbf{\color{red}[#1]}}
+
+\def \s{\mathbf{s}}
+\def \v{\mathbf{v}}
+\def \x{\mathbf{x}}
+\def \r{\mathbf{r}}
+\def \k{\mathbf{k}}
+
+\def \cm{\mathrm{cm}}
+\def \cms{\mathrm{cm/s}}
+\def \sec{\mathrm{s}}
+\def \K{\mathrm{K}}
+
+\def\red{\textcolor{red}}
+
+
+
+\begin{document}
+
+%% Comment out or remove this line before generating final copy for submission; this will also remove the warning re: "Consecutive odd pages found".
+% \instructionspage  
+
+\maketitle
+
+%% Adds the main heading for the SI text. Comment out this line if you do not have any supporting information text.
+\SItext% Requires: \usepackage{amsmath}
+\section*{Experimental method}
+
+To produce solidified deuterium ($\rm D_2$) tracer particles, we slowly inject a gas mixture of $5\%$ $\rm D_2$ and $95\%$ ${}^{4}\rm He$ into a superfluid helium bath. Our gas injection system is similar to that described by Fonda et al. \cite{fonda2016injection}. A solenoid valve is installed to control the duration of the gas injection, and a needle valve is used to regulate the gas flow rate. The injected $\rm D_2$ gas solidifies into small ice particles with a mean radius of 1.1 $\mu \rm m$, derived from the particle settling velocities in quiescent superfluid helium \cite{tang2023visualization}. A 473 nm continuous-wave laser sheet (thickness: $0.8~\rm mm$) illuminates the particles, and their motion in the laser sheet plane is recorded by a camera at 200 frames per second with a maximum resolution of $2560 \times 1440$ pixels. We then identify vortex reconnection events from the recorded videos, and manually track the coordinates of the trapped particles for the pre- (if captured) and post-reconnection. Knowing the particle coordinates, the minimum distance between the reconnecting vortices $\delta^{\pm}(t)$ can be measured. We calculate the prefactors $A^\pm$ using the slopes of linear fits to the $\delta^2(t)$ data.
+
+\section*{Numerical Method}
+
+Using Schwarz mesoscopic model \cite{schwarzThreedimensionalVortexDynamics1988a}, vortex lines can be described as space curves $\s(\xi,t)$ of infinitesimal thickness, with a single quantum of circulation $\kappa=h/m_4=9.97\times10^{-8}\text{m}^2/\text{s}$, where $h$ is Planck's constant, $m_4=6.65\times10^{-27}\text{kg}$ is the mass of one helium atom, $\xi$ is the natural parameterisation, arclength, and $t$ is time. These conditions are a good approximation, since the vortex core radius of superfluid \textsuperscript{4}He($a_0=10^{-10}\text{m}$) is much smaller than any of the length scale of interest in turbulent flows. The equation of motion is
+\begin{equation}
+	\dot{\s}(\xi,t) = \v_s + \frac{\beta}{1+\beta}\left[\v_{ns}\cdot \s'\right]\s' + \beta\s'\times\v_{ns}+\beta'\s'\times\left[\s'\times \v_{ns}\right],
+\end{equation}
+where $\dot{\s}=\partial\s/\partial t$, $\s'=\partial\s/\partial \xi$ is the unit tangent vector, $\v_{ns}=\v_n - \v_s$, $\v_n$ and $\v_s$ are the normal fluid and superfluid velocities at $\s$ and $\beta$,$\beta'$ are temperature and Reynolds number dependent mutual fricition coefficients \cite{galantucciNewSelfconsistentApproach2020b}. The superfluid velocity $\v_s$ at a point $\x$ is determined by the Biot-Savart law
+\begin{equation}
+	\v_s(\x,t) = \frac{\kappa}{4\pi}\oint_{\mathcal{T}}\frac{\s'(\xi,t)\times\left[\x-\s(\xi,t)\right]}{|\x-\s(\xi,t)|}d\xi,
+\end{equation}
+where $\mathcal{T}$ represents the entire vortex configuration.
+There is currently a lack of a well-defined theory of vortex reconnections in superfluid helium, like for the Gross-Pitaevskii equation \cite{villoisIrreversibleDynamicsVortex2020,villoisUniversalNonuniversalAspects2017a,promentMatchingTheoryCharacterize2020a}. An \emph{ad hoc} vortex reconnection algorithm is employed to resolve the collisions of vortex lines \cite{baggaleySensitivityVortexFilament2012a}.
+
+A \emph{two-way model} is crucial to understand the accurately interept the back-reaction effect of the normal fluid on the vortex line and vice-versa \cite{stasiakCrossComponentEnergyTransfer2024}. We self-consistently evolve the normal fluid $\v_n$ with a modified Navier-Stokes equation
+\begin{equation}
+	\frac{\partial \v_n}{\partial t} + (\v_n\cdot\nabla)\v_n = -\nabla\frac{p}{\rho} + \nu_n\nabla^2\v_n + \frac{\mathbf{F}_{ns}}{\rho_n},
+\end{equation}
+\begin{equation}
+	\mathbf{F}_{ns} = \oint_{\mathcal{T}}\mathbf{f}_{ns}\delta(\x-\x)d\xi, \quad \nabla\cdot\v_n=0,
+\end{equation}
+where $\rho=\rho_n + \rho_s$ is the total density, $\rho_n$ and $\rho_s$ are the normal fluid and superfluid densities, $p$ is the pressure, $\nu_n$ is the kinematic viscosity of the normal fluid and $\mathbf{f}_{ns}$ is the local friction per unit length \cite{galantucciCoupledNormalFluid2015a}
+\begin{equation}
+	\mathbf{f}_{ns} = -D\s'\times\left[\s'\times(\dot{\s}-\v_n)\right]-\rho_n\kappa\s'\times(\v_n-\dot{\s}), 
+\end{equation}
+where $D$ is a coefficient dependent on the vortex Reynolds number and intrinsic properties of the normal fluid.
+
+The results in this Letter are reported in dimensionless units, where the characteristic length scale is $\tilde{\lambda}=D/D_0$, where $D^3=(1\times10^{-3}\text{m})^3$ is the dimensional cube size, $D_0^3=(2\pi)^3$ is the non-dimensional cubic computational domain. The time scale is given by $\tilde{\tau} = \tilde{\lambda}^2\nu_n^0/\nu_n$, where the non-dimensional viscosity $\nu_n^0$ resolves the small scales of the normal fluid. In these simulations, these quantities are $\tilde{\lambda}=1.59\times10^{-4}\text{cm}$, $\nu_n^0=0.16$ and $\tilde{\tau} = 0.183$s at $T=0K$ and at $T=1.9K$ and $\tilde{\tau}=0.242$s at $T=2.1K$.
+We consider two distinct initial vortex geometries at $T=0K,1.9K$ and $2.1K$. The first is a Hopf link, two linked rings of radius $R\approx1$ with an offset in the $xy$-plane defined by parameters $\Delta l_x$ and $\Delta l_y$. The offsets are chosen so that $(\Delta l_x, \Delta l _y) \in \lbrace(0.125i,0.125j)|i,j=-3,\cdots,3 \rbrace$, a total of 49 reconnections for each temperature. The second geometry is a collision of vortex rings of radius $R\approx1$ in a tent-like configuration (see Fig. \ref{fig: ring-coll-viz}), making an angle $\alpha$ with the vertical. We take 12 realisations of $\alpha$, such that $\alpha\in\lbrace i\pi/13|i=1,\cdots,12\rbrace$. 
+
+In both cases, normal fluid rings are initially superimposed to match the vortex lines, eliminating the transient phase of generating normal fluid structures. The Lagrangian discretisation of vortex lines is $\Delta\xi=0.025$ (a total of 668 discretiation points) with a timestep of $\Delta t_{VF}=1.25\times10^{-5}$. A total of $N=256^3$ Eulerian mesh points were used for the normal fluid, with a timestep of $\Delta t_{NS} = 40\Delta t_{VF}$.
+
+%%% Each figure should be on its own page
+\begin{figure}
+	\centering
+	\includegraphics[width=0.9\textwidth]{init-cond-schem.png}
+	\caption{Schematic diagram for numeric initial condition. \emph{Left:} Hopf-link. \emph{Right:} Oblique collision.}
+	\label{fig: ring-coll-viz}
+\end{figure}
+
+
+%%% Add this line AFTER all your figures and tables
+\FloatBarrier
+
+\movie{3D rendering of the oblique collision of superfluid vortices at an intermediate angle using FOUCAULT. The green tube represents the superfluid vortex, with the thickness greatly exaggerated for visual purposes. The red and blue volume shading represents the normalised normal fluid enstrophy}
+
+\movie{The same as in Movie S1. but with a varying camera angle to emphasize the dimensionality.}
+
+\movie{3D rendering of a vortex reconnection from the Hopf link initial condition using FOUCAULT. The red tube represents superfluid vortices, the thickness of which is greatly exaggerated for visual purposes. The blue volume shading represents normalized normal fluid enstrophy.}
+
+% \dataset{data.txt}{The data will be available at XXX.}
+\bibliography{references}
+
+\end{document}
