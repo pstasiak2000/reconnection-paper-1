@@ -1,0 +1,786 @@
+\documentclass[9pt,twocolumn,twoside]{pnas-new}
+%DIF LATEXDIFF DIFFERENCE FILE
+%DIF DEL main-PNAS_OLD.tex   Tue Apr  8 17:24:53 2025
+%DIF ADD main-PNAS.tex       Tue Apr  8 18:12:06 2025
+% Use the lineno option to display guide line numbers if required.
+
+\templatetype{pnasresearcharticle} % Choose template
+% {pnasresearcharticle} = Template for a two-column research article
+% {pnasmathematics} %= Template for a one-column mathematics article
+% {pnasinvited} %= Template for a PNAS invited submission
+
+\usepackage{graphicx}% Include figure files
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}% bold math
+\usepackage{blindtext}
+\usepackage{float}
+\usepackage{caption,cancel}
+\usepackage{cleveref}
+\usepackage{subcaption}
+\usepackage{xcolor}
+
+\newcommand{\bom}{\boldsymbol{\omega}}
+
+\def\s{\mathbf{s}}
+\def\v{\mathbf{v}}
+\def\x{\mathbf{x}}
+\def\r{\mathbf{r}}
+\def\k{\mathbf{k}}
+
+\def\cm{\mathrm{cm}}
+\def\cms{\mathrm{cm/s}}
+\def\sec{\mathrm{s}}
+\def\K{\mathrm{K}}
+
+\def\red#1{\textcolor{red}{#1}}
+\def\blue#1{\textcolor{blue}{#1}}
+\def\magenta#1{\textcolor{magenta}{#1}}
+\newcommand*{\NOTE}[1]{\textbf{\color{red}[#1]}}
+%DIF PREAMBLE EXTENSION ADDED BY LATEXDIFF
+%DIF UNDERLINE PREAMBLE %DIF PREAMBLE
+\RequirePackage[normalem]{ulem} %DIF PREAMBLE
+\RequirePackage{color}\definecolor{RED}{rgb}{1,0,0}\definecolor{BLUE}{rgb}{0,0,1} %DIF PREAMBLE
+\providecommand{\DIFadd}[1]{{\protect\color{blue}\uwave{#1}}} %DIF PREAMBLE
+\providecommand{\DIFdel}[1]{{\protect\color{red}\sout{#1}}} %DIF PREAMBLE
+%DIF SAFE PREAMBLE %DIF PREAMBLE
+\providecommand{\DIFaddbegin}{} %DIF PREAMBLE
+\providecommand{\DIFaddend}{} %DIF PREAMBLE
+\providecommand{\DIFdelbegin}{} %DIF PREAMBLE
+\providecommand{\DIFdelend}{} %DIF PREAMBLE
+\providecommand{\DIFmodbegin}{} %DIF PREAMBLE
+\providecommand{\DIFmodend}{} %DIF PREAMBLE
+%DIF FLOATSAFE PREAMBLE %DIF PREAMBLE
+\providecommand{\DIFaddFL}[1]{\DIFadd{#1}} %DIF PREAMBLE
+\providecommand{\DIFdelFL}[1]{\DIFdel{#1}} %DIF PREAMBLE
+\providecommand{\DIFaddbeginFL}{} %DIF PREAMBLE
+\providecommand{\DIFaddendFL}{} %DIF PREAMBLE
+\providecommand{\DIFdelbeginFL}{} %DIF PREAMBLE
+\providecommand{\DIFdelendFL}{} %DIF PREAMBLE
+\newcommand{\DIFscaledelfig}{0.5}
+%DIF HIGHLIGHTGRAPHICS PREAMBLE %DIF PREAMBLE
+\RequirePackage{settobox} %DIF PREAMBLE
+\RequirePackage{letltxmacro} %DIF PREAMBLE
+\newsavebox{\DIFdelgraphicsbox} %DIF PREAMBLE
+\newlength{\DIFdelgraphicswidth} %DIF PREAMBLE
+\newlength{\DIFdelgraphicsheight} %DIF PREAMBLE
+% store original definition of \includegraphics %DIF PREAMBLE
+\LetLtxMacro{\DIFOincludegraphics}{\includegraphics} %DIF PREAMBLE
+\newcommand{\DIFaddincludegraphics}[2][]{{\color{blue}\fbox{\DIFOincludegraphics[#1]{#2}}}} %DIF PREAMBLE
+\newcommand{\DIFdelincludegraphics}[2][]{% %DIF PREAMBLE
+\sbox{\DIFdelgraphicsbox}{\DIFOincludegraphics[#1]{#2}}% %DIF PREAMBLE
+\settoboxwidth{\DIFdelgraphicswidth}{\DIFdelgraphicsbox} %DIF PREAMBLE
+\settoboxtotalheight{\DIFdelgraphicsheight}{\DIFdelgraphicsbox} %DIF PREAMBLE
+\scalebox{\DIFscaledelfig}{% %DIF PREAMBLE
+\parbox[b]{\DIFdelgraphicswidth}{\usebox{\DIFdelgraphicsbox}\\[-\baselineskip] \rule{\DIFdelgraphicswidth}{0em}}\llap{\resizebox{\DIFdelgraphicswidth}{\DIFdelgraphicsheight}{% %DIF PREAMBLE
+\setlength{\unitlength}{\DIFdelgraphicswidth}% %DIF PREAMBLE
+\begin{picture}(1,1)% %DIF PREAMBLE
+\thicklines\linethickness{2pt} %DIF PREAMBLE
+{\color[rgb]{1,0,0}\put(0,0){\framebox(1,1){}}}% %DIF PREAMBLE
+{\color[rgb]{1,0,0}\put(0,0){\line( 1,1){1}}}% %DIF PREAMBLE
+{\color[rgb]{1,0,0}\put(0,1){\line(1,-1){1}}}% %DIF PREAMBLE
+\end{picture}% %DIF PREAMBLE
+}\hspace*{3pt}}} %DIF PREAMBLE
+} %DIF PREAMBLE
+\LetLtxMacro{\DIFOaddbegin}{\DIFaddbegin} %DIF PREAMBLE
+\LetLtxMacro{\DIFOaddend}{\DIFaddend} %DIF PREAMBLE
+\LetLtxMacro{\DIFOdelbegin}{\DIFdelbegin} %DIF PREAMBLE
+\LetLtxMacro{\DIFOdelend}{\DIFdelend} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFaddbegin}{\DIFOaddbegin \let\includegraphics\DIFaddincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFaddend}{\DIFOaddend \let\includegraphics\DIFOincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFdelbegin}{\DIFOdelbegin \let\includegraphics\DIFdelincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFdelend}{\DIFOaddend \let\includegraphics\DIFOincludegraphics} %DIF PREAMBLE
+\LetLtxMacro{\DIFOaddbeginFL}{\DIFaddbeginFL} %DIF PREAMBLE
+\LetLtxMacro{\DIFOaddendFL}{\DIFaddendFL} %DIF PREAMBLE
+\LetLtxMacro{\DIFOdelbeginFL}{\DIFdelbeginFL} %DIF PREAMBLE
+\LetLtxMacro{\DIFOdelendFL}{\DIFdelendFL} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFaddbeginFL}{\DIFOaddbeginFL \let\includegraphics\DIFaddincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFaddendFL}{\DIFOaddendFL \let\includegraphics\DIFOincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFdelbeginFL}{\DIFOdelbeginFL \let\includegraphics\DIFdelincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFdelendFL}{\DIFOaddendFL \let\includegraphics\DIFOincludegraphics} %DIF PREAMBLE
+%DIF COLORLISTINGS PREAMBLE %DIF PREAMBLE
+\RequirePackage{listings} %DIF PREAMBLE
+\RequirePackage{color} %DIF PREAMBLE
+\lstdefinelanguage{DIFcode}{ %DIF PREAMBLE
+%DIF DIFCODE_UNDERLINE %DIF PREAMBLE
+  moredelim=[il][\color{red}\sout]{\%DIF\ <\ }, %DIF PREAMBLE
+  moredelim=[il][\color{blue}\uwave]{\%DIF\ >\ } %DIF PREAMBLE
+} %DIF PREAMBLE
+\lstdefinestyle{DIFverbatimstyle}{ %DIF PREAMBLE
+	language=DIFcode, %DIF PREAMBLE
+	basicstyle=\ttfamily, %DIF PREAMBLE
+	columns=fullflexible, %DIF PREAMBLE
+	keepspaces=true %DIF PREAMBLE
+} %DIF PREAMBLE
+\lstnewenvironment{DIFverbatim}{\lstset{style=DIFverbatimstyle}}{} %DIF PREAMBLE
+\lstnewenvironment{DIFverbatim*}{\lstset{style=DIFverbatimstyle,showspaces=true}}{} %DIF PREAMBLE
+\lstset{extendedchars=\true,inputencoding=utf8}
+
+%DIF END PREAMBLE EXTENSION ADDED BY LATEXDIFF
+
+\begin{document}
+
+\title{Experimental and theoretical evidence of universality in superfluid vortex reconnections}
+
+\author[a,1]{Piotr Z. Stasiak}
+\author[b,c]{Yiming Xing}
+\author[b,c]{Yousef Alihosseini}
+\author[a]{Carlo F. Barenghi}
+\DIFdelbegin %DIFDELCMD < \author[a]{%%%
+\DIFdelend \DIFaddbegin \author[a,d]{\DIFaddend Andrew Baggaley}
+\author[b,c]{Wei Guo}
+\DIFdelbegin %DIFDELCMD < \author[d,a]{%%%
+\DIFdelend \DIFaddbegin \author[e,a]{\DIFaddend Luca Galantucci}
+\DIFdelbegin %DIFDELCMD < \author[e]{%%%
+\DIFdelend \DIFaddbegin \author[f]{\DIFaddend Giorgio Krstulovic}
+
+\affil[a]{School of Mathematics, Statistics and Physics, Newcastle University, Newcastle upon Tyne, NE1 7RU, United Kingdom}
+\affil[b]{National High Magnetic Field Laboratory, 1800 East Paul Dirac Drive, Tallahassee, Florida 32310, USA}
+\affil[c]{Mechanical Engineering Department, FAMU-FSU College of Engineering, Tallahassee, Florida 32310, USA}
+\DIFdelbegin %DIFDELCMD < \affil[d]{Istituto per le Applicazioni del Calcolo ``M. Picone" IAC CNR, Via dei Taurini 19, 00185 Roma, Italy}
+%DIFDELCMD < \affil[e]{Universit\'e C\^ote d'Azur, Observatoire de la C\^ote d'Azur, CNRS,Laboratoire Lagrangre, Boulevard de l'Observatoire CS 34229 - F 06304 NICE Cedex 4, France}
+%DIFDELCMD < %%%
+\DIFdelend \DIFaddbegin \affil[d]{Department of Mathematics and Statistics, Lancaster University, Lancaster, LA1 4YF, United Kingdom}
+\affil[e]{Istituto per le Applicazioni del Calcolo ``M. Picone" IAC CNR, Via dei Taurini 19, 00185 Roma, Italy}
+\affil[f]{Universit\'e C\^ote d'Azur, Observatoire de la C\^ote d'Azur, CNRS,Laboratoire Lagrangre, Boulevard de l'Observatoire CS 34229 - F 06304 NICE Cedex 4, France}
+\DIFaddend 
+
+% Please give the surname of the lead author for the running footer
+\leadauthor{Stasiak}
+
+% Please add here a significance statement to explain the relevance of your work
+\significancestatement{Vortex reconnections are fundamental events that create and sustain turbulence in ordinary fluids (water, air) and in quantum fluids (superfluid helium, Bose-Einstein condensates). In this first joint experimental/theoretical study of reconnections in superfluids, we experimentally demonstrate the time-irreversible character of reconnecting quantum vortices in superfluid helium: their separation dynamics is faster than their approach dynamics. This asymmetry,and its consequent irreversible dynamics, is a universal feature of reconnections, as it has been predicted, numerically, also for other bosonic and fermionic superfluids and for ordinary fluids. Besides the topology, reconnections are also important for the energetics. We find that each reconnection injects superfluid energy into the thermal normal fluid, maintaining it in a dynamically perturbed state.}
+
+% Please include corresponding author, author contribution and author declaration information
+\authorcontributions{}
+\authordeclaration{The authors declare no competing interest.}
+\equalauthors{}
+\correspondingauthor{\textsuperscript{1}To whom correspondence should be addressed. E-mail: p.stasiak@newcastle.ac.uk}
+
+% Keywords are not mandatory, but authors are strongly encouraged to provide them. If provided, please include two to five keywords, separated by the pipe symbol, e.g:
+\keywords{reconnections $|$ superfluids $|$ vortices $|$ turbulence}
+
+
+\begin{abstract}
+	The minimum separation between reconnecting vortices
+	in fluids and superfluids obeys a universal scaling law with respect to time.
+	The pre-reconnection and the post-reconnection prefactors 
+	of this scaling law are different, a property related to irreversibility and to energy
+	transfer and dissipation mechanisms.
+	In the present work, we determine the temperature dependence of these prefactors in superfluid helium
+	from experiments and a numeric model which fully accounts for the 
+	coupled dynamics of the superfluid
+	vortex lines and the thermal normal fluid component. At all temperatures, we observe 
+	a pre- and post-reconnection asymmetry similar to that observed in other superfluids
+	and in classical viscous fluids, indicating that vortex reconnections display a
+	universal behaviour independent of 
+	the small-scale regularising dynamics.   
+	We also numerically show that each vortex reconnection event
+	represents a sudden injection of energy in the normal fluid. 
+	Finally we argue that
+	in a turbulent flow, these punctuated energy injections can sustain 
+	the normal fluid
+	in a perturbed state, provided that the density of superfluid vortices is large enough.
+\end{abstract}
+
+\dates{This manuscript was compiled on \today}
+\doi{\url{www.pnas.org/cgi/doi/10.1073/pnas.XXXXXXXXXX}}
+
+\maketitle
+\thispagestyle{firststyle}
+\ifthenelse{\boolean{shortarticle}}{\ifthenelse{\boolean{singlecolumn}}{\abscontentformatted}{\abscontent}}{}
+
+\firstpage[1]{3}
+% Use \firstpage to indicate which paragraph and line will start the second page and subsequent formatting. In this example, there are a total of 11 paragraphs on the first page, counting the first level heading as a paragraph. The value {12} represents the number of the paragraph starting the second page. If a paragraph runs over onto the second page, include a bracket with the paragraph line number starting the second page, followed by the paragraph number in curly brackets, e.g. "\firstpage[4]{11}".
+
+
+
+Reconnections are the fundamental events that
+change the topology of the field lines in fluids and plasmas during their time evolution. Reconnections thus determine important physical properties, such as mixing and inter-scale energy transfer in fluids \cite{YaoHussainAnnRev2022}, or solar flares and tokamak instabilities in plasmas \cite{Chapman2010}. The nature of reconnections is more clearly studied if the field lines are concentrated in well-separated filamentary structures: vortices in fluids and magnetic flux tubes in plasmas. In superfluid helium this concentration is extreme, providing an ideal context: superfluid vorticity is confined to vortex lines of atomic thickness (approximately $a_0 \approx 10^{-10}~\rm m$); a further simplification 
+is that, unlike what happens in ordinary fluids, the
+circulation of a superfluid vortex  is constrained to the quantized value $\kappa=h/m=9.97 \times 10^{-8}~\rm m^2/s$, 
+where $m$ is the mass of one helium atom and $h$ is Planck's constant. 
+
+It was in this superfluid context that it was theoretically and experimentally recognized
+\cite{nazarenko2003,bewley2008,paoletti2010,zuccherQuantumVortexReconnections2012a,villoisUniversalNonuniversalAspects2017a,galantucciCrossoverInteractionDriven2019a,tylutki2021universal}
+that reconnections share a universal property irrespective of the initial
+condition: the minimum distance between reconnecting 
+vortices, $\delta^{\pm}$, scales with time, $t$, according to the form
+\begin{equation}
+\label{eq:scaling}
+	\delta^{\pm}(t) = A^{\pm} (\kappa|t-t_0|)^{1/2},
+\end{equation} 
+\noindent
+where $t_0$ is the reconnection time, and the dimensionless
+prefactors $A^-$ and $A^+$ refer respectively to before
+($t<t_0$) and after ($t>t_0$) the reconnection. The same scaling law
+was then found for reconnections in ordinary viscous fluids 
+\cite{yaoSeparationScalingViscous2020}. In the case of a pure
+superfluid at temperature $T=0~\rm K$, theoretical work based on
+the Gross-Pitaevskii equation (GPE) has shown that
+$A^+>A^-$, that is, after the reconnection, vortex lines move away from 
+each others faster than in the initial approach; this result has been
+related to irreversibility \cite{villoisIrreversibleDynamicsVortex2020,promentMatchingTheoryCharacterize2020}. Indeed, a geometrical constraint imposes 
+\cite{promentMatchingTheoryCharacterize2020}
+that a piece of vortex length needs to be ``deleted'' 
+during the reconnection process. In the GP model, this loss is possible 
+by the emission of a rarefaction pulse created immediately after 
+the reconnection
+\cite{leadbeaterSoundEmissionDue2001b,zuccherQuantumVortexReconnections2012a} which removes some of the kinetic energy and momentum of the vortex configuration.
+This vortex energy loss depends on
+the ratio $A^+/A^-$, which in \DIFdelbegin \DIFdel{turns }\DIFdelend \DIFaddbegin \DIFadd{turn }\DIFaddend defines the approaching angle of collision
+between the vortices, together with other several geometrical quantities \cite{villoisUniversalNonuniversalAspects2017a,promentMatchingTheoryCharacterize2020}. 
+The temporal asymmetry $A^+>A^-$ can be thus interpreted as a non-trivial manifestation of irreversibility, as it originates from an ideal hydrodynamic process independent of the small-scale regularisation mechanism of the fluid.
+
+Indeed, in classical fluid vortex reconnections, although the definition of $A^+$ is more delicate as circulation is not necessarily conserved, the same asymmetry $A^+>A^-$ was reported \cite{yaoSeparationScalingViscous2020}. Instead of the generation of rarefaction pulses, like in the case of $T=0$ superfluids, close to the reconnection, the classical fluid creates a series of thin secondary structures that can be then efficiently dissipated by viscous dissipation.
+\DIFaddbegin \DIFadd{We note that the reconnection event also generates wavepackets of Kelvin waves about either side of the reconnection cusp, which propagate outward (visible in the bottom panel of Fig~\ref{fig:ring-coll-viz}). These waves are the fundamental mechanism transfering superfluid kinetic energy to smaller scales \mbox{%DIFAUXCMD
+\cite{vinen2001decay,vinen2002quantum}}\hskip0pt%DIFAUXCMD
+. The interaction of Kelvin waves with the normal fluid has recently been studied \mbox{%DIFAUXCMD
+\cite{stasiakCrossComponentEnergyTransfer2024,stasiak2025inverse}}\hskip0pt%DIFAUXCMD
+.
+}\DIFaddend 
+
+\begin{figure*}
+	 \centering
+%DIFDELCMD < \begin{subfigure}[b]{0.24\textwidth}
+%DIFDELCMD < 		\centering
+%DIFDELCMD < 		\includegraphics*[width=\textwidth]{exp-snap-1.pdf}
+%DIFDELCMD < 	\end{subfigure}
+%DIFDELCMD < 	\begin{subfigure}[b]{0.24\textwidth}
+%DIFDELCMD < 		\centering
+%DIFDELCMD < 		\includegraphics*[width=\textwidth]{exp-snap-2.pdf}
+%DIFDELCMD < 	\end{subfigure}
+%DIFDELCMD <     \begin{subfigure}[b]{0.24\textwidth}
+%DIFDELCMD < 		\centering
+%DIFDELCMD < 		\includegraphics*[width=\textwidth]{exp-snap-3.pdf}
+%DIFDELCMD < 	\end{subfigure}
+%DIFDELCMD <     \begin{subfigure}[b]{0.24\textwidth}
+%DIFDELCMD < 		\centering
+%DIFDELCMD < 		\includegraphics*[width=\textwidth]{exp-snap-4.pdf}
+%DIFDELCMD < 	\end{subfigure}
+%DIFDELCMD < 	\hfill
+%DIFDELCMD <        \vspace{5pt}
+%DIFDELCMD < 	\begin{subfigure}[b]{0.24\textwidth}
+%DIFDELCMD < 		\centering
+%DIFDELCMD < 		\includegraphics*[width=\textwidth]{snap-1.pdf}
+%DIFDELCMD < 	\end{subfigure}
+%DIFDELCMD < 	\begin{subfigure}[b]{0.24\textwidth}
+%DIFDELCMD < 		\centering
+%DIFDELCMD < 		\includegraphics*[width=\textwidth]{snap-2.pdf}
+%DIFDELCMD < 	\end{subfigure}
+%DIFDELCMD <     \begin{subfigure}[b]{0.24\textwidth}
+%DIFDELCMD < 		\centering
+%DIFDELCMD < 		\includegraphics*[width=\textwidth]{snap-3.pdf}
+%DIFDELCMD < 	\end{subfigure}
+%DIFDELCMD <     \begin{subfigure}[b]{0.24\textwidth}
+%DIFDELCMD < 		\centering
+%DIFDELCMD < 		\includegraphics*[width=\textwidth]{snap-4.pdf}
+%DIFDELCMD < 	\end{subfigure}
+%DIFDELCMD < %%%
+	\includegraphics*[width=\textwidth]{snaps-combined.pdf}
+	\DIFaddendFL \caption{\emph{Top row:} Images showing tracer particles trapped on reconnecting vortices in superfluid helium at 1.65 K. The arrows denote the vortices before and after the reconnection. The first two images show that the vortices approach each other before the reconnection, which occurs at $t=0.58$ s. After the reconnection, the resulting vortices start to move apart, as shown in the last two images.
+	\emph{Bottom row:} Oblique collision of two circular vortex rings at different 
+	(dimensionless) times, here in units of $\tau=0.183$s.
+	The superfluid vortex lines are represented by red tubes (the radius has been greatly 
+	exaggerated for visual purposes); the scaled normal fluid enstrophy 
+	$\bom^2/\bom^2_{max}$ is represented by the blue volume rendering.}
+	\label{fig:ring-coll-viz}
+\end{figure*}
+
+
+%DIF >  \begin{figure*}
+%DIF >         \centering
+%DIF >  	\begin{subfigure}[b]{0.24\textwidth}
+%DIF >  		\centering
+%DIF >  		\includegraphics*[width=\textwidth]{exp-snap-1.pdf}
+%DIF >  	\end{subfigure}
+%DIF >  	\begin{subfigure}[b]{0.24\textwidth}
+%DIF >  		\centering
+%DIF >  		\includegraphics*[width=\textwidth]{exp-snap-2.pdf}
+%DIF >  	\end{subfigure}
+%DIF >      \begin{subfigure}[b]{0.24\textwidth}
+%DIF >  		\centering
+%DIF >  		\includegraphics*[width=\textwidth]{exp-snap-3.pdf}
+%DIF >  	\end{subfigure}
+%DIF >      \begin{subfigure}[b]{0.24\textwidth}
+%DIF >  		\centering
+%DIF >  		\includegraphics*[width=\textwidth]{exp-snap-4.pdf}
+%DIF >  	\end{subfigure}
+%DIF >  	\hfill
+%DIF >         \vspace{5pt}
+%DIF >  	\begin{subfigure}[b]{0.24\textwidth}
+%DIF >  		\centering
+%DIF >  		\includegraphics*[width=\textwidth]{snap-1.pdf}
+%DIF >  	\end{subfigure}
+%DIF >  	\begin{subfigure}[b]{0.24\textwidth}
+%DIF >  		\centering
+%DIF >  		\includegraphics*[width=\textwidth]{snap-2.pdf}
+%DIF >  	\end{subfigure}
+%DIF >      \begin{subfigure}[b]{0.24\textwidth}
+%DIF >  		\centering
+%DIF >  		\includegraphics*[width=\textwidth]{snap-3.pdf}
+%DIF >  	\end{subfigure}
+%DIF >      \begin{subfigure}[b]{0.24\textwidth}
+%DIF >  		\centering
+%DIF >  		\includegraphics*[width=\textwidth]{snap-4.pdf}
+%DIF >  	\end{subfigure}
+%DIF >  \caption{\emph{Top row:} Images showing tracer particles trapped on reconnecting vortices in superfluid helium at 1.65 K. The arrows denote the vortices before and after the reconnection. The first two images show that the vortices approach each other before the reconnection, which occurs at $t=0.58$ s. After the reconnection, the resulting vortices start to move apart, as shown in the last two images.
+%DIF >  \emph{Bottom row:} Oblique collision of two circular vortex rings at different 
+%DIF >  (dimensionless) times, here in units of $\tau=0.183$s.
+%DIF >  The superfluid vortex lines are represented by red tubes (the radius has been greatly 
+%DIF >  exaggerated for visual purposes); the scaled normal fluid enstrophy 
+%DIF >  $\bom^2/\bom^2_{max}$ is represented by the blue volume rendering.}
+%DIF >  \label{fig:ring-coll-viz}
+%DIF >  \end{figure*}
+\DIFaddbegin 
+
+\DIFaddend The case of superfluid helium at non-zero temperatures
+is more intriguing. Most experiments are performed at $T>1~\rm K$, a regime in which in addition to quantum vortices, thermal excitations constitute a viscous liquid called the {\it normal fluid}. The normal fluid can steal energy from filaments and dissipate it by viscous effects, opening in that way more routes towards irreversibility. Modern visualisation techniques rely on hydrogen/deuterium tracer particles to decorate superfluid vortices \cite{paoletti2008velocity,bewley2008,guo2014visualization,perettiDirectVisualizationQuantum2023}. Numerous studies have provided insight into the post-reconnection dynamics and the prefactor $A^{+}$, but much less is known about $A^-$ from experiments due to the challenges of visualising vortices approaching a reconnection.
+
+The aim of this Letter is to investigate the role played by the normal fluid in the reconnection dynamics. In particular, given the temperature dependence of the normal fluid's properties, we study experimentally and numerically the temperature dependence of the prefactors $A^+$ and $A^-$ and numerically investigate the energy injected in the normal fluid. 
+%
+To achieve this aim we need a more powerful model than the GPE to account not only for the dynamics of the
+superfluid vortices, but also for the dynamics of the normal fluid. 
+%The presence of the second, viscous normal fluid leads to a two-fluid 
+%vortex reconnection.
+We show that at non-zero temperatures Eq.~(\ref{eq:scaling}) and the
+relation $A^+>A^-$ hold true, in agreement with experiments, revealing, for the 
+first time, a temperature dependence of $A^+/A^-$. In addition, we
+show that a vortex
+reconnection represents an unusual kind of
+punctuated energy injection into the normal fluid which acts alongside
+the well-known (continual) friction.
+When applied to superfluid turbulence, this last result implies that,
+if the vortex line density (hence the frequency of reconnections) is large enough, vortex reconnections can maintain the normal fluid in a perturbed state.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section*{Results}
+
+
+
+\begin{figure}[t]
+	\centering
+	\includegraphics*[width=0.48\textwidth]{minimum_distances_combined.pdf}
+\begin{subcaptiongroup*}
+	\phantomsubcaption \label{fig:minimum-distance}
+	\phantomsubcaption \label{fig:prefactors}
+\end{subcaptiongroup*}	
+\DIFaddendFL \caption{\emph{(a)}: Time evolution of the (dimensionless)
+minimum distance squared $\delta^2$ plotted versus (dimensionless) $\kappa (t-t_0)$ for
+the Hopf link reconnections at $T=0K,1.9K$ and $2.1K$ (black, blue and red
+respectively). The grey shaded areas
+are the regions used to estimate the prefactors $A^{\pm}$. 
+\emph{Inset:} Experimental superfluid helium data.
+\emph{(b)}: Comparison of all prefactors: Hopf links (\emph{HL}, circles), 
+ring collisions (\emph{RC}, stars with yellow outline), GPE-data 
+from Villois \emph{et. al.} \cite{villoisIrreversibleDynamicsVortex2020} (green diamonds) and experimental results from this study (triangles and vertical dot-dashed lines). 
+The shaded areas associated with each colour represent the convex hull of errors 
+for each temperature and the black dashed line represents the theoretical bound for $A^+/A^-$. Schematic rendering of initial conditions are included.}
+\DIFaddbeginFL \label{fig:min-dist-prefactor}
+\DIFaddendFL \end{figure}
+
+%DIF >  \begin{figure}[t]
+%DIF >  	\centering
+%DIF >  	\begin{subfigure}[b]{0.45\textwidth}
+%DIF >  		\centering
+%DIF >  		\includegraphics*[width=\textwidth]{min-delta-with-exp.pdf}
+%DIF >  		\caption{}
+%DIF >  		\label{fig:minimum-distance}
+%DIF >  	\end{subfigure}
+%DIF >  	\begin{subfigure}[b]{0.45\textwidth}
+%DIF >  		\centering
+%DIF >  		\includegraphics*[width=\textwidth]{prefactors-with-exp.pdf}
+%DIF >  		\caption{}
+%DIF >  		\label{fig:prefactors}
+%DIF >  	\end{subfigure}
+%DIF >  \caption{\emph{(a)}: Time evolution of the (dimensionless)
+%DIF >  minimum distance squared $\delta^2$ plotted versus (dimensionless) $\kappa (t-t_0)$ for
+%DIF >  the Hopf link reconnections at $T=0K,1.9K$ and $2.1K$ (black, blue and red
+%DIF >  respectively). The grey shaded areas
+%DIF >  are the regions used to estimate the prefactors $A^{\pm}$. 
+%DIF >  \emph{Inset:} Experimental superfluid helium data.
+%DIF >  \emph{(b)}: Comparison of all prefactors: Hopf links (\emph{HL}, circles), 
+%DIF >  ring collisions (\emph{RC}, stars with yellow outline), GPE-data 
+%DIF >  from Villois \emph{et. al.} \cite{villoisIrreversibleDynamicsVortex2020} (green diamonds) and experimental results from this study (triangles and vertical dot-dashed lines). 
+%DIF >  The shaded areas associated with each colour represent the convex hull of errors 
+%DIF >  for each temperature and the black dashed line represents the theoretical bound for $A^+/A^-$. Schematic rendering of initial conditions are included.}
+%DIF >  \end{figure}
+\DIFaddbegin 
+
+\DIFaddend \subsection*{Scaling law}
+
+In the experiment, two reconnections were observed where both $A^+$ and $A^-$ could be identified and calculated, at $T=1.65K$ and $T=2K$, plotted as orange triangles in Fig.~\ref{fig:prefactors}. We also analysed six additional experimental observations of the \emph{post-reconnection} dynamics only (vertical dot-dashed lines). All were consistent with the $\delta^{1/2}$ scaling with $A^+$ in the range 1.2-4.2, plotted as vertical lines in Fig.~\ref{fig:prefactors} Their corresponding minimal distances are displayed in the inset of Fig~\ref{fig:minimum-distance}.
+%
+The pre-reconnection factor $A^-$ lies within the 0.4-0.6 range, consistent with the results of the numerics, and a clear temperature effect between a superfluid component majority and normal fluid component majority.
+In the case of the Hopf link 
+%the interaction between the two rings leads to a reconnection.  
+we have performed 147 simulations 
+(49 across 3 temperatures) as shown in Fig.~\ref{fig:minimum-distance} and
+verified Eq.~(\ref{eq:scaling}) for the minimum distance $\delta^{\pm}$. 
+The prefactors $A^{\pm}$ have been computed in the shaded region 
+of the figure. In the pre-reconnection regime ($t<t_0$) we observe
+a clear segregation of the values of $A^-$ due to temperature: 
+the minimum distance grows more rapidly with time if the temperature is
+lowered. 
+In stark contrast, there is almost no memory of the temperature in the
+post-reconnection regime ($t>t_0$). 
+%\red{The lack of a temperature dependence for $A^+$ suggests
+%that the normal fluid plays only a minor role in the
+%dynamics of the post-reconnection regime.
+
+
+At $T=0~{\rm K}$, our calculations for superfluid helium (black symbols in Fig.~\ref{fig:prefactors}) are in good agreement with previous results obtained with the GPE \cite{villoisIrreversibleDynamicsVortex2020} (green diamonds), showing irreversible dynamics. In addition, the computed values of $A^-\approx 0.4$-$0.6$ at $T=0~{\rm K}$ are consistent with analytical calculations \cite{boue-etal-2013,rica-2019}. At non-zero temperatures, our results confirm the irreversibility of vortex reconnections observed at $T=0$ as $A^+$ is always larger than $A^-$. Importantly, this asymmetry is recovered in all our simulations, regardless of their initial condition.
+%Our results confirm the irreversibility of vortex reconnections 
+%\red{($A^+>A^-$)} at non-zero temperatures. 
+%As shown in Fig.~\ref{fig:prefactors}, \red{our} $T=0~{\rm K}$ calculation 
+%for superfluid helium is in good agreement with the GPE model for
+%a condensate at $T=0$, which yields $A^-\approx 0.4$-$0.6$ 
+%for both initial conditions \red{[ADD REF]}. 
+The same asymmetry between $A^+$ and $A^-$ at non-zero temperatures has been observed for reconnections in finite-temperature
+Bose-Einstein condensatates \cite{allen2014}, although in this work the system is not homogeneous (the condensate is confined by a harmonic trap) and the thermal component is a ballistc gas, not a viscous fluid. Note that the vortex reconnections in classical viscous fluids reported in %the classical Navier-Stokes equation
+\cite{yaoSeparationScalingViscous2020} also display
+a clear $1/2$ power-law scaling for the minimum distance
+with $A^- \approx 0.3$-$0.4$, which again shows good agreement with our results. The scaling law (Eq.~\ref{eq:scaling}) and the range of values of $A^-$ hence appear to have a universal character in vortex reconnections, independently of the nature of the fluid, classical or quantum.
+
+\subsection*{Energy Injection}
+
+The normal fluid impacts the dynamics of reconnecting superfluid vortices via the temperature dependent mutual friction coefficients. Conversely, the motion of superfluid vortices involved in the reconnection process influence, significantly, the dynamics of the normal fluid. Figure~\ref{fig:energy-evol} indeed shows that the normal fluid energy, $E_n$,
+suddenly increases at the reconnection time by an amount ($\approx 5\%$)
+which is smaller but comparable to the continuous energy increase as vortex
+lines approach each other. Indeed the
+curvature $\zeta=|\s''|$ of the vortex line 
+spikes at $t=t_0$ when
+the reconnection cusp is created, and, in the first approximation \cite{galantucci-krstulovic-etal-2023},
+the magnitude of the energy injected in the normal fluid per unit time $I$
+is proportional to the strength of the mutual friction force $\mathbf{F}_{ns}$ which scales as
+$|\mathbf{F}_{ns}(\s)|\propto|\dot{\s}-\v_n|\propto|\dot{\s}|\propto\zeta$. This sudden
+transfer of energy
+\cite{stasiakCrossComponentEnergyTransfer2024} from the superfluid
+vortex configuration to the normal fluid is the origin of the 
+small scale normal fluid enstrophy structures
+which are visible in Fig.~\ref{fig:ring-coll-viz}.   
+
+\begin{figure}
+	\centering
+	\includegraphics*[width=0.45\textwidth]{energy-evolution.pdf}
+	\caption{Normal fluid kinetic energy $E_n$ scaled by $E_n^0$ (the 
+kinetic energy at $t=t_0$), plotted versus (dimensionless)
+$\kappa (t-t_0)$ for the Hopf link reconnections. Black diamonds represent the simulations 
+with minimum and maximum prefactor ratios $A^+/A^-$ at $T=1.9~\rm K$ and 
+$T=2.1~\rm K$ respectively.}
+	\label{fig:energy-evol}
+\end{figure}
+
+The total energy injected into the normal fluid by the reconnection,
+$\Delta E_n$, which hereafter
+we refer to as the energy jump, is defined as
+\begin{equation}
+	\Delta E_n = \max{\left[E_n(t>t_0)\right]} - E_n^0,
+\end{equation} 
+%
+where $E_n^0=E_n(t_0)$ is the normal fluid kinetic energy at $t=t_0$.
+Normalized energy jumps are plotted in
+Fig.~\ref{fig:energy-jumps} as a function of
+the ratio $A^+/A^-$. Here, we observe that the larger $A^+/A^-$ is,
+the smaller the normal fluid excitation is.
+
+The emission of the sound pulse at the vortex reconnection 
+\cite{leadbeaterSoundEmissionDue2001b} which is typical of the GPE model
+is absent in our incompressible hydrodynamic approach. To model
+this effect, the change of vortex length, $\Delta L$, created by the
+vortex reconnection algorithm is always negative by construction
+\cite{baggaleySensitivityVortexFilament2012a},
+because, in the local induction approximation to the Biot-Savart law, 
+the superfluid incompressible kinetic energy, $E_s$, is proportional to the vortex length,
+$L$. Such procedure ensures that at $T=0~{\rm K}$ when a reconnection occurs
+$\Delta E_s\propto \Delta L < 0$.
+Consequentially, in the absence of any dissipative normal fluid, 
+the superfluid energy 
+$E_s$ that would be transferred to the sound pulse, normalized with its value $E_s^0$ at 
+reconnection, is $-\Delta L/L_0$. 
+If these normalized energy jumps (black diamonds
+in Fig.~\ref{fig:energy-jumps}) are compared to the results obtained with the 
+compressible GPE \cite{villoisIrreversibleDynamicsVortex2020} (purple squares)
+we find a good agreement, confirming that the model we employ, 
+is suitable for the investigation of the \DIFdelbegin \DIFdel{feature }\DIFdelend \DIFaddbegin \DIFadd{features }\DIFaddend of single reconnection events.
+
+\subsection*{Implications for turbulence}
+
+Our numerical results have implications for our understanding of 
+quantum turbulence \cite{BSS2023}.
+A fully developed turbulent tangle of vortices is
+characterized by its vortex line density $\mathcal{L}$ (vortex length
+per unit volume); the frequency 
+of vortex reconnections per unit volume is 
+${f=(\kappa/6\pi)\mathcal{L}^{5/2}\ln(\mathcal{L}^{-1/2}/a_0)}$
+\cite{barenghi2004}. From Fig.~\ref{fig:energy-evol} we estimate the 
+normal fluid reconnection relaxation time $\tau_n$ as the time 
+after reconnection at which the normal fluid energy $E_n/E_0$ has decayed
+to the pre-reconnection level: in our dimensionless units, $\kappa \tau_n \approx 0.25$. 
+Using this timescale, we estimate that
+the average vortex line density that is required to sustain the normal fluid 
+in a perturbed state via frequent vortex reconnections is approximately
+$\mathcal{L} \approx 10^7$ to $10^8\mathrm{m}^{-2}$. 
+Experiments in $^4$He
+\cite{schwarz1981,milliken1982,roche2008,roche2007,Babuin2014} and in $^3$He
+\cite{bradley2006} can achieve vortex line densities much larger than this.
+%DIF > \red{Above the vortex line density threshold, the perturbation of normal fluid energy generated by the reconnection is still present when the successive reconnection takes place: the energy does not decay to zero, but will increase in time. 
+%DIF > Below this critical threshold, in some situations, even a background level of normal  fluid disturbances which remains small but is constantly injected by reconnections may become relevant. 
+%DIF > In general, these finite amplitude normal fluid disturbances constantly injected by reconnections may become relevant for various superfluid helium systems. 
+%DIF > One example are oscillatory flows, widely studied  in superfluid helium using vibrating wires and forks. At low frequency, perturbations which start at finite-amplitude rather than infinitesimal-amplitude level  have enough time to became of order one (hence visible and destabilizing) in the supercritical part of the cycle \cite{barenghi1989modulated}. A second example is pipe flow, again relevant to helium experiments, which is known to suffer from finite-amplitude instabilities \cite{peixinho2007finite}. This effect clearly needs further investigations.} 
+
+\DIFaddbegin \DIFadd{Above the vortex line density threshold, the increase of normal fluid energy generated by the reconnection will not have time to decay before the subsequent reconnection occurs, which will add again more energy. In this manner, the normal fluid energy will not decay to zero, but will increase in time. In general, such finite amplitude normal fluid disturbances constantly injected by reconnections may become relevant for various superfluid helium systems. One example is the oscillatory flows, which are widely studied in superfluid helium using vibrating wires and forks. At low frequency, perturbations which start at finite-amplitude rather than infinitesimal-amplitude level have enough time to become of order one (hence visible and destabilizing) in the supercritical part of the cycle \mbox{%DIFAUXCMD
+\cite{barenghi1989modulated}}\hskip0pt%DIFAUXCMD
+. A second example is pipe flow, again relevant to helium experiments, which is known to suffer from finite-amplitude instabilities \mbox{%DIFAUXCMD
+\cite{peixinho2007finite}}\hskip0pt%DIFAUXCMD
+. This effect clearly needs further investigations.
+}
+
+
+\DIFaddend \begin{figure}
+	\centering
+	\includegraphics*[width=0.48\textwidth]{energy-jump.pdf}
+	\caption{Normalized energy jumps $\Delta E_n/E_n^0$ for Hopf link 
+reconnections.The solid black diamonds are the normalized change in line length $\Delta L/L_0$ in the
+$T=0~\rm K$ case. Blue and red circle correspond to $T=1.9K$ and $T=2.1K$ \DIFdelbeginFL \DIFdelFL{,}\DIFdelendFL respectively. The purple squares are from GPE simulations of
+Villois et al. \cite{villoisIrreversibleDynamicsVortex2020}.}
+	\label{fig:energy-jumps}
+\end{figure}
+
+\section*{Discussion}
+
+We have conducted an experiment using passive particle tracers and a suite of numerical simulations of vortex reconnections over a wide range of temperatures using a model of $^4$He which accounts for the coupled dynamics of superfluid and normal fluid components.
+We have verified the scaling law of the minimum vortex distance 
+$\delta^{\pm}=A^{\pm} (\kappa |t-t_0|)^{1/2}$ and found that the approach prefactor $A^-$ has a clear temperature dependence independent of the geometry in both experiments and numerics, in contrast to the
+separation prefactor $A^+$. The prefactors are in good agreement
+with GPE simulations \cite{villoisIrreversibleDynamicsVortex2020,allen2014} 
+and classical fluid reconnections \cite{yaoSeparationScalingViscous2020}
+revealing that vortex reconnections display a universal behaviour, linked to irreversible vortex energy dissipation, regardless of the nature
+of the fluid (classical or quantum) and of temperature, \textit{i.e.} regardless of the small scale energy transfer mechanism. 
+It is worth noting that the behaviour, as a function of $A^+/A^-$, of 
+the energy injected in the normal fluid (at $T>0$) and of the energy transferred to sound (at $T=0$)
+\cite{villoisIrreversibleDynamicsVortex2020,leadbeaterSoundEmissionDue2001b} is dissimilar: the former decreases as $A^+/A^-$
+increases, the latter the opposite. This likely arises from the distinct physics governing the loss of superfluid 
+incompressible kinetic energy: mutual friction at $T>0$, quantum pressure at $T=0$.
+We have also found that a reconnection event suddenly injects an amount of energy 
+into the normal fluid which is comparable to the energy transferred by friction
+during the vortex approach. Applying these results to turbulence, we have
+compared the decay time of the normal fluid structures created by a
+reconnection to the frequency of reconnections in a vortex tangle, and argued
+that, if the vortex line density is large enough, these punctuated
+energy injections should sustain the normal fluid in a perturbed state, which may lead to a new type of turbulence.
+
+\DIFdelbegin %DIFDELCMD < \matmethods{%
+%DIFDELCMD < \subsection*{Experimental Method}
+%DIFDELCMD < 
+
+%DIFDELCMD < To visualize the reconnection 
+%DIFDELCMD < dynamics, we decorate the vortices using solidified deuterium 
+%DIFDELCMD < ($\rm{D_2}$) tracer particles of density $202.8~\rm{kg/m^3}$ 
+%DIFDELCMD < \cite{xu2008density}) and mean radius $1.1\times10^{-6}~\rm m$ 
+%DIFDELCMD < \cite{tang2023visualization,tang2021visualization}. These particles
+%DIFDELCMD < are generated by injecting a $\rm D_2$/${}^{4}\rm He$ gas mixture into 
+%DIFDELCMD < the superfluid helium bath 
+%DIFDELCMD < %through a gas injection system 
+%DIFDELCMD < \cite{tang2023visualization,fonda2016injection} 
+%DIFDELCMD < as described in the Supplementary 
+%DIFDELCMD < Material (SM).
+%DIFDELCMD < %\cite{SeeSupplementaryMaterials} for more details). 
+%DIFDELCMD < When the particles are near the vortices,
+%DIFDELCMD < they become trapped inside their cores
+%DIFDELCMD < because of the Bernoulli pressure arising from the 
+%DIFDELCMD < circulating superfluid flow.
+%DIFDELCMD < % around the vortex cores. 
+%DIFDELCMD < A thin laser sheet is used to illuminate the particles, and their motion 
+%DIFDELCMD < is recorded at 200 Hz by a camera positioned at a right angle to the laser 
+%DIFDELCMD < sheet. A high-quality reconnection event, observed at $T=1.65~\rm K$ 
+%DIFDELCMD < and capturing both the pre- and post-reconnection dynamics, is shown 
+%DIFDELCMD < in  Fig.~\ref{fig:ring-coll-viz} as an example. Note that according 
+%DIFDELCMD < to GP simulations \cite{GiuriatoQuantumVortexReconnections2020} the transfer 
+%DIFDELCMD < of energy and momentum between particle and vortex does not modify
+%DIFDELCMD < the approaching rates significantly. Reconnection events reported in this
+%DIFDELCMD < work have been captured in multiple experiments, either following particle 
+%DIFDELCMD < injection or long time (\textit{i.e.}, 30-60 s) after towing a grid through superfluid helium. 
+%DIFDELCMD < % Whereas in the particle-vortex system, vortex energy and momentum 
+%DIFDELCMD < %are also transferred to particles, these additional mechanisms do not 
+%DIFDELCMD < %modify the approaching rates 
+%DIFDELCMD < (this is also supported by the scaling symmetry 
+%DIFDELCMD < of the system which allows to draw conclusion for length-scales relevant 
+%DIFDELCMD < to experiments). 
+%DIFDELCMD < 
+
+%DIFDELCMD < \subsection*{Numerical Method}
+%DIFDELCMD < 
+
+%DIFDELCMD < We follow the approach of Schwarz \cite{schwarz1988} which exploits
+%DIFDELCMD < the vast separation of length scales between the vortex core $a_0$ and any
+%DIFDELCMD < other relevant distance, in particular the average distance between vortices,
+%DIFDELCMD < $\ell$, in the case of turbulence. Vortex lines are described
+%DIFDELCMD < as space curves $\s(\xi,t)$ where $\xi$ is arclength. The equation of motion 
+%DIFDELCMD < of the vortex lines is
+%DIFDELCMD < \begin{displaymath}
+%DIFDELCMD < \label{eq:s}
+%DIFDELCMD < 	\dot{\s}(\xi,t) = \v_s + \frac{\beta}{(1+\beta)}\left[\v_{ns}\cdot \s'\right]\s' + \beta\s'\times\v_{ns}+\beta'\s'\times\left[\s'\times \v_{ns}\right],
+%DIFDELCMD < \end{displaymath}
+%DIFDELCMD < %
+%DIFDELCMD < where $\dot{\s}=\partial\s/\partial t$, $\s'=\partial\s/\partial \xi$ 
+%DIFDELCMD < is the unit tangent vector, 
+%DIFDELCMD < $\v_n$ and $\v_s$ are the normal fluid and superfluid velocities at $\s$,
+%DIFDELCMD < $\v_{ns}=\v_n - \v_s$, and $\beta$, $\beta'$ are temperature and Reynolds number dependent 
+%DIFDELCMD < mutual friction coefficients \cite{galantucciNewSelfconsistentApproach2020b}. The normal fluid velocity $\v_n$ is described as a classical fluid obeying the incompressible ($\nabla\cdot\v_n=0$) Navier-Stokes equations:
+%DIFDELCMD < %
+%DIFDELCMD < \begin{displaymath}
+%DIFDELCMD < 	\frac{\partial \v_n}{\partial t} + (\v_n\cdot\nabla)\v_n = 
+%DIFDELCMD <         -\frac{1}{\rho} \nabla p + \nu_n\nabla^2\v_n + \frac{\mathbf{F}_{ns}}{\rho_n},
+%DIFDELCMD <         \label{eq:vn}
+%DIFDELCMD < \end{displaymath}
+%DIFDELCMD < where $\mathbf{F}_{ns}$ is the mutual friction force that couples the normal fluid and the superfluid vortices, and acts as an internal injection mechanism. In Eq.~\eqref{eq:vn}, $\rho=\rho_n + \rho_s$, where $\rho_n$ and $\rho_s$ are the normal fluid and superfluid densities, $p$ is the pressure, 
+%DIFDELCMD < and $\nu_n$ is the kinematic viscosity of the normal fluid. 
+%DIFDELCMD < Equations~(\ref{eq:s}) and (\ref{eq:vn})
+%DIFDELCMD < are solved in dimensionless form by rescaling them by the characteristic time $\tau$ and length $\lambda$. 
+%DIFDELCMD < The algorithm for vortex reconnections is standard
+%DIFDELCMD < \cite{baggaleySensitivityVortexFilament2012a}. We consider two distinct initial vortex configurations
+%DIFDELCMD < at three temperatures $T=0~\rm K$, $1.9~\rm K$ and $2.1~\rm K$
+%DIFDELCMD < corresponding to the superfluid fractions $\rho_s/\rho=100 \%$,
+%DIFDELCMD < $58 \%$ and $26 \%$. To compare with experiments, the unit of length is set to $\lambda=1.59 \times 10^{-4}~\rm m$, and the time units to $\tau=0.183~\rm s$ at $T=0~\rm K$ and $1.9~\rm K$, and $\tau=0.242~\rm s$ at $T=2.1~\rm K$, 
+%DIFDELCMD < see also the SM for details.
+%DIFDELCMD < %\cite{SeeSupplementaryMaterials} for details.
+%DIFDELCMD < All configurations lead to a vortex reconnection.
+%DIFDELCMD < The first configuration consists of two vortex rings 
+%DIFDELCMD < of (dimensionless) radius $R\approx 1$ in a tent-like shape
+%DIFDELCMD < which collide obliquely 
+%DIFDELCMD < making an initial angle $\alpha$ with the vertical direction, 
+%DIFDELCMD < as shown in Fig.~\ref{fig:ring-coll-viz}, and,
+%DIFDELCMD < schematically, in Fig.~\ref{fig:prefactors}.   
+%DIFDELCMD < By changing the parameter $\alpha$, we create a sample of 12 realizations
+%DIFDELCMD < at each temperature (again, see the SM for details).
+%DIFDELCMD < %\cite{SeeSupplementaryMaterials} for details).
+%DIFDELCMD < %We take 12 realizations of $\alpha$, such that 
+%DIFDELCMD < %$\alpha\in\lbrace i\pi/13|i=1,\cdots,12\rbrace$. 
+%DIFDELCMD < %The supplementary material 
+%DIFDELCMD < %gives more details of our model and these configurations
+%DIFDELCMD < %\cite{SeeSupplementaryMaterials}. 
+%DIFDELCMD < The second configuration is the Hopf link, shown schematically in Fig.~\ref{fig:prefactors}. It consists of two perpendicular linked rings of radius $R\approx1$ with an offset in the $xy$-plane.
+%DIFDELCMD < By changing the offset, we create a sample of 49 reconnections
+%DIFDELCMD < at each temperature, as described in the SM.
+%DIFDELCMD < %\cite{SeeSupplementaryMaterials}.
+%DIFDELCMD < %defined by parameters $\Delta l_x$ and $\Delta l_y$ 
+%DIFDELCMD < %The offsets are chosen so that 
+%DIFDELCMD < %$(\Delta l_x, \Delta l _y) \in \lbrace(0.125i,0.125j)|i,j=-3,\cdots,3 \rbrace$,
+%DIFDELCMD < %providing us with a total of 49 reconnections for each temperature. 
+%DIFDELCMD < In all cases, normal fluid structures generated by moving superfluid vortex rings \cite{kivotides-barenghi-samuels-2000}, are initially prepared to eliminate any potential transients.
+%DIFDELCMD < }
+%DIFDELCMD < %%%
+\DIFdelend \DIFaddbegin \matmethods{%
+\subsection*{Experimental Method}
+
+To visualize the reconnection 
+dynamics, we decorate the vortices using solidified deuterium 
+($\rm{D_2}$) tracer particles of density $202.8~\rm{kg/m^3}$ 
+\cite{xu2008density}) and mean radius $1.1\times10^{-6}~\rm m$ 
+\cite{tang2023visualization,tang2021visualization}. These particles
+are generated by injecting a $\rm D_2$/${}^{4}\rm He$ gas mixture into 
+the superfluid helium bath 
+%through a gas injection system 
+\cite{tang2023visualization,fonda2016injection} 
+as described in the Supplementary 
+Material (SM).
+%\cite{SeeSupplementaryMaterials} for more details). 
+When the particles are near the vortices,
+they become trapped inside their cores
+because of the Bernoulli pressure arising from the 
+circulating superfluid flow.
+% around the vortex cores. 
+A thin laser sheet is used to illuminate the particles, and their motion 
+is recorded at 200 Hz by a camera positioned at a right angle to the laser 
+sheet. A high-quality reconnection event, observed at $T=1.65~\rm K$ 
+and capturing both the pre- and post-reconnection dynamics, is shown 
+in  Fig.~\ref{fig:ring-coll-viz} as an example. Note that according 
+to GP simulations \cite{GiuriatoQuantumVortexReconnections2020} the transfer 
+of energy and momentum between particle and vortex does not modify
+the approaching rates significantly. Reconnection events reported in this
+work have been captured in multiple experiments, either following particle 
+injection or long time (\textit{i.e.}, 30-60 s) after towing a grid through superfluid helium. 
+% Whereas in the particle-vortex system, vortex energy and momentum 
+%are also transferred to particles, these additional mechanisms do not 
+%modify the approaching rates  
+(this is also supported by the scaling symmetry 
+of the system which allows us to draw conclusion for length-scales relevant 
+to experiments). 
+
+\subsection*{Numerical Method}
+
+We follow the approach of Schwarz \cite{schwarz1988} which exploits
+the vast separation of length scales between the vortex core $a_0$ and any
+other relevant distance, in particular the average distance between vortices,
+$\ell$, in the case of turbulence. Vortex lines are described
+as space curves $\s(\xi,t)$ where $\xi$ is arclength. The equation of motion 
+of the vortex lines is
+\begin{equation}
+\label{eq:s}
+	\dot{\s}(\xi,t) = \v_s + \frac{\beta}{(1+\beta)}\left[\v_{ns}\cdot \s'\right]\s' + \beta\s'\times\v_{ns}+\beta'\s'\times\left[\s'\times \v_{ns}\right],
+\end{equation}
+%
+where $\dot{\s}=\partial\s/\partial t$, $\s'=\partial\s/\partial \xi$ 
+is the unit tangent vector, 
+$\v_n$ and $\v_s$ are the normal fluid and superfluid velocities at $\s$,
+$\v_{ns}=\v_n - \v_s$, and $\beta$, $\beta'$ are temperature and Reynolds number dependent 
+mutual friction coefficients \cite{galantucciNewSelfconsistentApproach2020b}. The normal fluid velocity $\v_n$ is described as a classical fluid obeying the incompressible ($\nabla\cdot\v_n=0$) Navier-Stokes equations:
+%
+\begin{equation}
+	\frac{\partial \v_n}{\partial t} + (\v_n\cdot\nabla)\v_n = 
+        -\frac{1}{\rho} \nabla p + \nu_n\nabla^2\v_n + \frac{\mathbf{F}_{ns}}{\rho_n},
+        \label{eq:vn}
+\end{equation}
+where $\mathbf{F}_{ns}$ is the mutual friction force that couples the normal fluid and the superfluid vortices, and acts as an internal injection mechanism. In Eq.~\eqref{eq:vn}, $\rho=\rho_n + \rho_s$, where $\rho_n$ and $\rho_s$ are the normal fluid and superfluid densities, $p$ is the pressure, 
+and $\nu_n$ is the kinematic viscosity of the normal fluid. 
+Equations~(\ref{eq:s}) and (\ref{eq:vn})
+are solved in dimensionless form by rescaling them by the characteristic time $\tau$ and length $\lambda$. 
+The algorithm for vortex reconnections is standard
+\cite{baggaleySensitivityVortexFilament2012a}. We consider two distinct initial vortex configurations
+at three temperatures $T=0~\rm K$, $1.9~\rm K$ and $2.1~\rm K$
+corresponding to the superfluid fractions $\rho_s/\rho=100 \%$,
+$58 \%$ and $26 \%$. To compare with experiments, the unit of length is set to $\lambda=1.59 \times 10^{-4}~\rm m$, and the time units to $\tau=0.183~\rm s$ at $T=0~\rm K$ and $1.9~\rm K$, and $\tau=0.242~\rm s$ at $T=2.1~\rm K$, 
+see also the SM for details.
+%\cite{SeeSupplementaryMaterials} for details.
+All configurations lead to a vortex reconnection.
+The first configuration consists of two vortex rings 
+of (dimensionless) radius $R\approx 1$ in a tent-like shape
+which collide obliquely 
+making an initial angle $\alpha$ with the vertical direction, 
+as shown in Fig.~\ref{fig:ring-coll-viz}, and,
+schematically, in Fig.~\ref{fig:prefactors}.   
+By changing the parameter $\alpha$, we create a sample of 12 realizations
+at each temperature (again, see the SM for details).
+%\cite{SeeSupplementaryMaterials} for details).
+%We take 12 realizations of $\alpha$, such that 
+%$\alpha\in\lbrace i\pi/13|i=1,\cdots,12\rbrace$. 
+%The supplementary material 
+%gives more details of our model and these configurations
+%\cite{SeeSupplementaryMaterials}. 
+The second configuration is the Hopf link, shown schematically in Fig.~\ref{fig:prefactors}. It consists of two perpendicular linked rings of radius $R\approx1$ with an offset in the $xy$-plane.
+By changing the offset, we create a sample of 49 reconnections
+at each temperature, as described in the SM.
+%\cite{SeeSupplementaryMaterials}.
+%defined by parameters $\Delta l_x$ and $\Delta l_y$ 
+%The offsets are chosen so that 
+%$(\Delta l_x, \Delta l _y) \in \lbrace(0.125i,0.125j)|i,j=-3,\cdots,3 \rbrace$,
+%providing us with a total of 49 reconnections for each temperature. 
+In all cases, normal fluid structures generated by moving superfluid vortex rings \cite{kivotides-barenghi-samuels-2000}, are initially prepared to eliminate any potential transients.
+}
+\DIFaddend 
+
+\showmatmethods{} % Display the Materials and Methods section
+
+\acknow{ Y.M.X., Y.A., and W.G. acknowledge the support from the Gordon and Betty Moore Foundation through Grant DOI 10.37807/gbmf11567 and the US Department of Energy under Grant DE-SC0020113. The experimental work was conducted at the National High Magnetic Field Laboratory at Florida State University, which is supported by the National Science Foundation Cooperative Agreement No. DMR-2128556 and the state of Florida. G.K. acknowledges financial support from the Agence Nationale de la Recherche through the project QuantumVIW ANR-23-CE30-0024-02. P.Z.S. acknowledges the financial support of the UCA ``visiting doctoral student program'' on complex systems. Computations were carried out at the Mésocentre SIGAMM hosted at the Observatoire de la Côte d’Azur.}
+\showacknow{} %
+
+\DIFdelbegin %DIFDELCMD < \bibsplit[19]
+%DIFDELCMD < %%%
+\DIFdelend \DIFaddbegin \bibsplit[21]
+\DIFaddend %Use \bibsplit to split the references from the body of the text. Value "[2]" represents the number of reference in the left column (Note: Please avoid single column figures & tables on this page.)
+
+% Bibliography
+\bibliography{references3}
+
+\end{document}
